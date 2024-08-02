@@ -104,9 +104,16 @@ public class JFSDK_DEMO_UI : MonoBehaviour
     }
 
     public void Init() {
-        //IntPtr hwnd = GetForegroundWindow(); //这个方法在360渠道中有问题 使用下面方法获取
-        JFListener = new CallBackListener();
-        JFSDK.getInstance().init(JFListener);
+        try
+        {
+            JFListener = new CallBackListener();
+            JFSDK.getInstance().init(JFListener);
+        }
+        catch (Exception ex)
+        {
+            Debug.LogError("SDK初始化异常："+ex);
+        }
+
     }
     public void Login()
     {
@@ -119,9 +126,9 @@ public class JFSDK_DEMO_UI : MonoBehaviour
             }
             JFSDK.getInstance().login();
         }
-        catch
+        catch (Exception ex)
         {
-            Debug.LogError("点击登录异常");
+            Debug.LogError("点击登录异常"+ex);
         }
 
     }
@@ -163,9 +170,9 @@ public class JFSDK_DEMO_UI : MonoBehaviour
             jfOrderInfo.setRemark(result[11]);
             JFSDK.getInstance().pay(jfOrderInfo);
         }
-        catch
+        catch (Exception ex)
         {
-            Debug.Log("点击支付异常");
+            Debug.Log("点击支付异常:"+ex);
         }
     }
 
@@ -304,6 +311,7 @@ public class CallBackListener : JFSDKListener
         Debug.Log("SDK请求关闭游戏，请在此方法实现");
         JFSDK_DEMO_UI.isInit = false ;
         JFSDK_DEMO_UI.token = "";
+        Application.Quit();
     }
 
     public override void onGameSwitchAccountCallback()
