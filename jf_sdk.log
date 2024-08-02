@@ -1,0 +1,670 @@
+[2024-01-22 17:42:20.800] [fileLogger] [info] 日志初始化完成
+[2024-01-22 17:42:20.800] [fileLogger] [error] 【jf_config文件没有找到】
+[2024-01-22 17:42:20.800] [fileLogger] [error] 【jf_config文件没有找到】
+[2024-01-22 17:42:20.800] [fileLogger] [error] 【jf_config文件没有找到】
+[2024-01-22 17:42:20.820] [fileLogger] [info] 【开始初始化】
+[2024-01-22 17:42:20.821] [fileLogger] [error] 【初始化失败，渠道未找到】
+[2024-01-22 17:44:13.977] [fileLogger] [info] 日志初始化完成
+[2024-01-22 17:44:13.978] [fileLogger] [error] 【jf_config文件没有找到】
+[2024-01-22 17:44:13.978] [fileLogger] [error] 【jf_config文件没有找到】
+[2024-01-22 17:44:13.978] [fileLogger] [error] 【jf_config文件没有找到】
+[2024-01-22 17:44:13.978] [fileLogger] [info] 【开始初始化】
+[2024-01-22 17:44:13.978] [fileLogger] [error] 【初始化失败，渠道未找到】
+[2024-01-22 17:46:08.342] [fileLogger] [info] 【开始初始化】
+[2024-01-22 17:46:08.342] [fileLogger] [error] 【初始化失败，渠道未找到】
+[2024-01-22 17:46:45.434] [fileLogger] [info] 日志初始化完成
+[2024-01-22 17:46:45.435] [fileLogger] [info] 【开始初始化】
+[2024-01-22 17:47:18.007] [fileLogger] [info] 【开始初始化】
+[2024-01-22 17:53:44.013] [fileLogger] [info] 日志初始化完成
+[2024-01-22 17:53:44.020] [fileLogger] [info] 【开始初始化】
+[2024-01-22 17:53:45.246] [fileLogger] [info] 【收到登录参数】
+[2024-01-22 17:53:45.246] [fileLogger] [info] 
+[2024-01-22 17:53:45.246] [fileLogger] [info] 【开始登录】
+[2024-01-22 17:53:45.511] [fileLogger] [info] 【绝峰用户信息同步结果】：{"code":"1","msg":"处理成功","data":"92015638","realNameInfo":{"thirdUserId":"","isAdult":1,"age":28},"token":"JFMIXTK_3048335_81450_84861033","thirdData":{"thirdName":"jfgame"}}
+[2024-01-22 17:53:45.512] [fileLogger] [info] 【绝峰用户信息同步成功】：
+[2024-01-22 17:54:12.776] [fileLogger] [info] 【开始初始化】
+[2024-01-22 17:54:16.151] [fileLogger] [info] 【收到登录参数】
+[2024-01-22 17:54:16.151] [fileLogger] [info] 
+[2024-01-22 17:54:16.151] [fileLogger] [info] 【开始登录】
+[2024-01-22 17:54:16.380] [fileLogger] [info] 【绝峰用户信息同步结果】：{"code":"1","msg":"处理成功","data":"92015638","realNameInfo":{"thirdUserId":"","isAdult":1,"age":28},"token":"JFMIXTK_3048335_81450_71412581","thirdData":{"thirdName":"jfgame"}}
+[2024-01-22 17:54:16.380] [fileLogger] [info] 【绝峰用户信息同步成功】：
+[2024-01-22 17:54:44.495] [fileLogger] [info] 【收到登录参数】
+[2024-01-22 17:54:44.495] [fileLogger] [info] aaaaaa
+[2024-01-22 17:54:44.495] [fileLogger] [info] 【开始登录】
+[2024-01-22 17:54:44.728] [fileLogger] [info] 【绝峰用户信息同步结果】：{"code":"1","msg":"处理成功","data":"92015638","realNameInfo":{"thirdUserId":"","isAdult":1,"age":28},"token":"JFMIXTK_3048335_81450_68830060","thirdData":{"thirdName":"jfgame"}}
+[2024-01-22 17:54:44.728] [fileLogger] [info] 【绝峰用户信息同步成功】：
+[2024-01-22 17:55:47.332] [fileLogger] [info] 【开始初始化】
+[2024-01-22 17:55:48.514] [fileLogger] [info] 【收到登录参数】
+[2024-01-22 17:55:48.518] [fileLogger] [info] 
+[2024-01-22 17:55:48.518] [fileLogger] [info] 【开始登录】
+[2024-01-22 17:55:48.772] [fileLogger] [info] 【绝峰用户信息同步结果】：{"code":"1","msg":"处理成功","data":"92015638","realNameInfo":{"thirdUserId":"","isAdult":1,"age":28},"token":"JFMIXTK_3048335_81450_64803301","thirdData":{"thirdName":"jfgame"}}
+[2024-01-22 17:55:48.775] [fileLogger] [info] 【绝峰用户信息同步成功】：
+[2024-01-22 18:19:52.223] [fileLogger] [info] 日志初始化完成
+[2024-01-22 18:19:52.224] [fileLogger] [info] 【开始初始化】
+[2024-01-22 18:19:53.807] [fileLogger] [info] 【收到登录参数】
+[2024-01-22 18:19:53.807] [fileLogger] [info] 
+[2024-01-22 18:19:53.807] [fileLogger] [info] 【开始登录】
+[2024-01-22 18:19:54.062] [fileLogger] [info] 【绝峰用户信息同步结果】：{"code":"1","msg":"处理成功","data":"92015638","realNameInfo":{"thirdUserId":"","isAdult":1,"age":28},"token":"JFMIXTK_3048335_81450_25874760","thirdData":{"thirdName":"jfgame"}}
+[2024-01-22 18:19:54.063] [fileLogger] [info] 【绝峰用户信息同步成功】：
+[2024-01-22 18:20:06.588] [fileLogger] [info] 【收到登录参数】
+[2024-01-22 18:20:06.588] [fileLogger] [info] 
+[2024-01-22 18:20:06.588] [fileLogger] [info] 【开始登录】
+[2024-01-22 18:20:06.843] [fileLogger] [info] 【绝峰用户信息同步结果】：{"code":"1","msg":"处理成功","data":"92015638","realNameInfo":{"thirdUserId":"","isAdult":1,"age":28},"token":"JFMIXTK_3048335_81450_83635462","thirdData":{"thirdName":"jfgame"}}
+[2024-01-22 18:20:06.843] [fileLogger] [info] 【绝峰用户信息同步成功】：
+[2024-01-22 18:20:07.369] [fileLogger] [info] 【收到登录参数】
+[2024-01-22 18:20:07.369] [fileLogger] [info] 
+[2024-01-22 18:20:07.369] [fileLogger] [info] 【开始登录】
+[2024-01-22 18:20:07.616] [fileLogger] [info] 【绝峰用户信息同步结果】：{"code":"1","msg":"处理成功","data":"92015638","realNameInfo":{"thirdUserId":"","isAdult":1,"age":28},"token":"JFMIXTK_3048335_81450_31184022","thirdData":{"thirdName":"jfgame"}}
+[2024-01-22 18:20:07.617] [fileLogger] [info] 【绝峰用户信息同步成功】：
+[2024-01-22 18:20:07.838] [fileLogger] [info] 【收到登录参数】
+[2024-01-22 18:20:07.838] [fileLogger] [info] 
+[2024-01-22 18:20:07.838] [fileLogger] [info] 【开始登录】
+[2024-01-22 18:20:08.086] [fileLogger] [info] 【绝峰用户信息同步结果】：{"code":"1","msg":"处理成功","data":"92015638","realNameInfo":{"thirdUserId":"","isAdult":1,"age":28},"token":"JFMIXTK_3048335_81450_14733855","thirdData":{"thirdName":"jfgame"}}
+[2024-01-22 18:20:08.087] [fileLogger] [info] 【绝峰用户信息同步成功】：
+[2024-01-22 18:20:08.119] [fileLogger] [info] 【收到登录参数】
+[2024-01-22 18:20:08.119] [fileLogger] [info] 
+[2024-01-22 18:20:08.119] [fileLogger] [info] 【开始登录】
+[2024-01-22 18:20:08.359] [fileLogger] [info] 【绝峰用户信息同步结果】：{"code":"1","msg":"处理成功","data":"92015638","realNameInfo":{"thirdUserId":"","isAdult":1,"age":28},"token":"JFMIXTK_3048335_81450_48634510","thirdData":{"thirdName":"jfgame"}}
+[2024-01-22 18:20:08.360] [fileLogger] [info] 【绝峰用户信息同步成功】：
+[2024-01-22 18:20:08.431] [fileLogger] [info] 【收到登录参数】
+[2024-01-22 18:20:08.432] [fileLogger] [info] 
+[2024-01-22 18:20:08.432] [fileLogger] [info] 【开始登录】
+[2024-01-22 18:20:08.679] [fileLogger] [info] 【绝峰用户信息同步结果】：{"code":"1","msg":"处理成功","data":"92015638","realNameInfo":{"thirdUserId":"","isAdult":1,"age":28},"token":"JFMIXTK_3048335_81450_70055303","thirdData":{"thirdName":"jfgame"}}
+[2024-01-22 18:20:08.679] [fileLogger] [info] 【绝峰用户信息同步成功】：
+[2024-01-22 18:20:08.744] [fileLogger] [info] 【收到登录参数】
+[2024-01-22 18:20:08.744] [fileLogger] [info] 
+[2024-01-22 18:20:08.744] [fileLogger] [info] 【开始登录】
+[2024-01-22 18:20:09.014] [fileLogger] [info] 【绝峰用户信息同步结果】：{"code":"1","msg":"处理成功","data":"92015638","realNameInfo":{"thirdUserId":"","isAdult":1,"age":28},"token":"JFMIXTK_3048335_81450_58175341","thirdData":{"thirdName":"jfgame"}}
+[2024-01-22 18:20:09.014] [fileLogger] [info] 【绝峰用户信息同步成功】：
+[2024-01-22 18:20:09.056] [fileLogger] [info] 【收到登录参数】
+[2024-01-22 18:20:09.056] [fileLogger] [info] 
+[2024-01-22 18:20:09.056] [fileLogger] [info] 【开始登录】
+[2024-01-22 18:20:09.297] [fileLogger] [info] 【绝峰用户信息同步结果】：{"code":"1","msg":"处理成功","data":"92015638","realNameInfo":{"thirdUserId":"","isAdult":1,"age":28},"token":"JFMIXTK_3048335_81450_65307145","thirdData":{"thirdName":"jfgame"}}
+[2024-01-22 18:20:09.297] [fileLogger] [info] 【绝峰用户信息同步成功】：
+[2024-01-22 18:20:09.338] [fileLogger] [info] 【收到登录参数】
+[2024-01-22 18:20:09.338] [fileLogger] [info] 
+[2024-01-22 18:20:09.338] [fileLogger] [info] 【开始登录】
+[2024-01-22 18:20:09.570] [fileLogger] [info] 【绝峰用户信息同步结果】：{"code":"1","msg":"处理成功","data":"92015638","realNameInfo":{"thirdUserId":"","isAdult":1,"age":28},"token":"JFMIXTK_3048335_81450_84226427","thirdData":{"thirdName":"jfgame"}}
+[2024-01-22 18:20:09.570] [fileLogger] [info] 【绝峰用户信息同步成功】：
+[2024-01-22 18:21:33.088] [fileLogger] [info] 【开始初始化】
+[2024-01-22 18:21:33.432] [fileLogger] [info] 【开始初始化】
+[2024-01-22 18:21:33.714] [fileLogger] [info] 【开始初始化】
+[2024-01-22 18:21:33.994] [fileLogger] [info] 【开始初始化】
+[2024-01-22 18:21:34.307] [fileLogger] [info] 【开始初始化】
+[2024-01-22 18:23:28.763] [fileLogger] [info] 【收到登录参数】
+[2024-01-22 18:23:28.763] [fileLogger] [info] 
+[2024-01-22 18:23:28.763] [fileLogger] [info] 【开始登录】
+[2024-01-22 18:23:29.060] [fileLogger] [info] 【绝峰用户信息同步结果】：{"code":"1","msg":"处理成功","data":"92015638","realNameInfo":{"thirdUserId":"","isAdult":1,"age":28},"token":"JFMIXTK_3048335_81450_58657570","thirdData":{"thirdName":"jfgame"}}
+[2024-01-22 18:23:38.095] [fileLogger] [info] 【开始初始化】
+[2024-01-22 18:23:39.489] [fileLogger] [info] 【收到登录参数】
+[2024-01-22 18:23:39.489] [fileLogger] [info] 
+[2024-01-22 18:23:39.489] [fileLogger] [info] 【开始登录】
+[2024-01-22 18:23:39.730] [fileLogger] [info] 【绝峰用户信息同步结果】：{"code":"1","msg":"处理成功","data":"92015638","realNameInfo":{"thirdUserId":"","isAdult":1,"age":28},"token":"JFMIXTK_3048335_81450_42160721","thirdData":{"thirdName":"jfgame"}}
+[2024-01-22 18:23:39.731] [fileLogger] [info] 【绝峰用户信息同步成功】：
+[2024-01-22 18:27:32.694] [fileLogger] [info] 日志初始化完成
+[2024-01-22 18:27:32.696] [fileLogger] [info] 【开始初始化】
+[2024-01-22 18:27:42.276] [fileLogger] [info] 【收到登录参数】
+[2024-01-22 18:27:42.276] [fileLogger] [info] 
+[2024-01-22 18:27:42.276] [fileLogger] [info] 【开始登录】
+[2024-01-22 18:27:42.530] [fileLogger] [info] 【绝峰用户信息同步结果】：{"code":"1","msg":"处理成功","data":"92015638","realNameInfo":{"thirdUserId":"","isAdult":1,"age":28},"token":"JFMIXTK_3048335_81450_70636110","thirdData":{"thirdName":"jfgame"}}
+[2024-01-22 18:27:42.531] [fileLogger] [info] 【绝峰用户信息同步成功】：
+[2024-01-22 18:27:47.838] [fileLogger] [info] 【收到登录参数】
+[2024-01-22 18:27:47.838] [fileLogger] [info] 
+[2024-01-22 18:27:47.838] [fileLogger] [info] 【开始登录】
+[2024-01-22 18:27:48.072] [fileLogger] [info] 【绝峰用户信息同步结果】：{"code":"1","msg":"处理成功","data":"92015638","realNameInfo":{"thirdUserId":"","isAdult":1,"age":28},"token":"JFMIXTK_3048335_81450_72260842","thirdData":{"thirdName":"jfgame"}}
+[2024-01-22 18:27:48.072] [fileLogger] [info] 【绝峰用户信息同步成功】：
+[2024-01-22 18:27:48.401] [fileLogger] [info] 【收到登录参数】
+[2024-01-22 18:27:48.401] [fileLogger] [info] 
+[2024-01-22 18:27:48.401] [fileLogger] [info] 【开始登录】
+[2024-01-22 18:27:48.638] [fileLogger] [info] 【绝峰用户信息同步结果】：{"code":"1","msg":"处理成功","data":"92015638","realNameInfo":{"thirdUserId":"","isAdult":1,"age":28},"token":"JFMIXTK_3048335_81450_76664646","thirdData":{"thirdName":"jfgame"}}
+[2024-01-22 18:27:48.638] [fileLogger] [info] 【绝峰用户信息同步成功】：
+[2024-01-22 18:27:48.641] [fileLogger] [info] 【收到登录参数】
+[2024-01-22 18:27:48.641] [fileLogger] [info] 
+[2024-01-22 18:27:48.641] [fileLogger] [info] 【开始登录】
+[2024-01-22 18:27:48.870] [fileLogger] [info] 【绝峰用户信息同步结果】：{"code":"1","msg":"处理成功","data":"92015638","realNameInfo":{"thirdUserId":"","isAdult":1,"age":28},"token":"JFMIXTK_3048335_81450_44610686","thirdData":{"thirdName":"jfgame"}}
+[2024-01-22 18:27:48.870] [fileLogger] [info] 【绝峰用户信息同步成功】：
+[2024-01-22 18:27:48.932] [fileLogger] [info] 【收到登录参数】
+[2024-01-22 18:27:48.932] [fileLogger] [info] 
+[2024-01-22 18:27:48.932] [fileLogger] [info] 【开始登录】
+[2024-01-22 18:27:49.174] [fileLogger] [info] 【绝峰用户信息同步结果】：{"code":"1","msg":"处理成功","data":"92015638","realNameInfo":{"thirdUserId":"","isAdult":1,"age":28},"token":"JFMIXTK_3048335_81450_00120244","thirdData":{"thirdName":"jfgame"}}
+[2024-01-22 18:27:49.174] [fileLogger] [info] 【绝峰用户信息同步成功】：
+[2024-01-22 18:27:49.177] [fileLogger] [info] 【收到登录参数】
+[2024-01-22 18:27:49.177] [fileLogger] [info] 
+[2024-01-22 18:27:49.177] [fileLogger] [info] 【开始登录】
+[2024-01-22 18:27:49.415] [fileLogger] [info] 【绝峰用户信息同步结果】：{"code":"1","msg":"处理成功","data":"92015638","realNameInfo":{"thirdUserId":"","isAdult":1,"age":28},"token":"JFMIXTK_3048335_81450_65355464","thirdData":{"thirdName":"jfgame"}}
+[2024-01-22 18:27:49.415] [fileLogger] [info] 【绝峰用户信息同步成功】：
+[2024-01-22 18:27:49.419] [fileLogger] [info] 【收到登录参数】
+[2024-01-22 18:27:49.419] [fileLogger] [info] 
+[2024-01-22 18:27:49.419] [fileLogger] [info] 【开始登录】
+[2024-01-22 18:27:49.654] [fileLogger] [info] 【绝峰用户信息同步结果】：{"code":"1","msg":"处理成功","data":"92015638","realNameInfo":{"thirdUserId":"","isAdult":1,"age":28},"token":"JFMIXTK_3048335_81450_84834305","thirdData":{"thirdName":"jfgame"}}
+[2024-01-22 18:27:49.655] [fileLogger] [info] 【绝峰用户信息同步成功】：
+[2024-01-22 18:27:49.713] [fileLogger] [info] 【收到登录参数】
+[2024-01-22 18:27:49.713] [fileLogger] [info] 
+[2024-01-22 18:27:49.713] [fileLogger] [info] 【开始登录】
+[2024-01-22 18:27:49.954] [fileLogger] [info] 【绝峰用户信息同步结果】：{"code":"1","msg":"处理成功","data":"92015638","realNameInfo":{"thirdUserId":"","isAdult":1,"age":28},"token":"JFMIXTK_3048335_81450_38130762","thirdData":{"thirdName":"jfgame"}}
+[2024-01-22 18:27:49.954] [fileLogger] [info] 【绝峰用户信息同步成功】：
+[2024-01-22 18:29:58.170] [fileLogger] [info] 【开始初始化】
+[2024-01-22 18:29:58.859] [fileLogger] [info] 【收到登录参数】
+[2024-01-22 18:29:58.860] [fileLogger] [info] 
+[2024-01-22 18:29:58.860] [fileLogger] [info] 【开始登录】
+[2024-01-22 18:29:59.098] [fileLogger] [info] 【绝峰用户信息同步结果】：{"code":"1","msg":"处理成功","data":"92015638","realNameInfo":{"thirdUserId":"","isAdult":1,"age":28},"token":"JFMIXTK_3048335_81450_58372237","thirdData":{"thirdName":"jfgame"}}
+[2024-01-22 18:29:59.099] [fileLogger] [info] 【绝峰用户信息同步成功】：
+[2024-01-23 00:07:18.162] [fileLogger] [info] 日志初始化完成
+[2024-01-23 00:07:18.164] [fileLogger] [info] 【开始初始化】
+[2024-01-23 00:08:02.201] [fileLogger] [info] 【开始初始化】
+[2024-01-23 00:08:22.056] [fileLogger] [info] 【开始初始化】
+[2024-01-23 00:11:14.138] [fileLogger] [info] 日志初始化完成
+[2024-01-23 00:11:14.139] [fileLogger] [info] 【开始初始化】
+[2024-01-23 00:11:15.125] [fileLogger] [info] 【收到登录参数】
+[2024-01-23 00:11:15.125] [fileLogger] [info] 
+[2024-01-23 00:11:15.125] [fileLogger] [info] 【开始登录】
+[2024-01-23 00:11:15.391] [fileLogger] [info] 【绝峰用户信息同步结果】：{"code":"1","msg":"处理成功","data":"92015638","realNameInfo":{"thirdUserId":"","isAdult":1,"age":28},"token":"JFMIXTK_3048335_81450_26175625","thirdData":{"thirdName":"jfgame"}}
+[2024-01-23 00:11:15.670] [fileLogger] [info] 【绝峰用户信息同步成功】：
+[2024-01-23 00:11:23.132] [fileLogger] [info] 【开始支付】
+[2024-01-23 00:21:37.761] [fileLogger] [info] 日志初始化完成
+[2024-01-23 00:21:37.762] [fileLogger] [info] 【开始初始化】
+[2024-01-23 00:21:39.592] [fileLogger] [info] 【收到登录参数】
+[2024-01-23 00:21:39.592] [fileLogger] [info] 
+[2024-01-23 00:21:39.592] [fileLogger] [info] 【开始登录】
+[2024-01-23 00:21:39.846] [fileLogger] [info] 【绝峰用户信息同步结果】：{"code":"1","msg":"处理成功","data":"92015638","realNameInfo":{"thirdUserId":"","isAdult":1,"age":28},"token":"JFMIXTK_3048335_81450_55416811","thirdData":{"thirdName":"jfgame"}}
+[2024-01-23 00:21:39.889] [fileLogger] [info] 【绝峰用户信息同步成功】：
+[2024-01-23 00:21:47.992] [fileLogger] [info] 【开始支付】
+[2024-01-23 00:23:05.040] [fileLogger] [info] 日志初始化完成
+[2024-01-23 00:23:05.040] [fileLogger] [error] 【jf_config文件没有找到】
+[2024-01-23 00:23:05.040] [fileLogger] [error] 【jf_config文件没有找到】
+[2024-01-23 00:23:05.040] [fileLogger] [error] 【jf_config文件没有找到】
+[2024-01-23 00:23:05.040] [fileLogger] [info] 【开始初始化】
+[2024-01-23 00:23:05.040] [fileLogger] [error] 【初始化失败，渠道未找到】
+[2024-01-23 10:50:54.742] [fileLogger] [info] 【开始初始化】
+[2024-01-23 10:50:55.740] [fileLogger] [info] 【收到登录参数】
+[2024-01-23 10:50:55.740] [fileLogger] [info] 
+[2024-01-23 10:50:55.740] [fileLogger] [info] 【开始登录】
+[2024-01-23 10:50:56.019] [fileLogger] [info] 【绝峰用户信息同步结果】：{"code":"1","msg":"处理成功","data":"92015638","realNameInfo":{"thirdUserId":"","isAdult":1,"age":28},"token":"JFMIXTK_3048335_81450_24318143","thirdData":{"thirdName":"jfgame"}}
+[2024-01-23 10:50:56.142] [fileLogger] [info] 【绝峰用户信息同步成功】：
+[2024-01-23 10:51:02.848] [fileLogger] [info] 【开始关闭】
+[2024-01-23 10:51:50.802] [fileLogger] [info] 日志初始化完成
+[2024-01-23 10:51:50.803] [fileLogger] [info] 【开始关闭】
+[2024-01-23 11:18:21.130] [fileLogger] [info] 日志初始化完成
+[2024-01-23 11:18:21.130] [fileLogger] [info] 【开始关闭】
+[2024-01-23 11:18:22.369] [fileLogger] [info] 【开始关闭】
+[2024-01-23 11:18:23.369] [fileLogger] [info] 【开始关闭】
+[2024-01-23 11:18:24.588] [fileLogger] [info] 【开始关闭】
+[2024-01-23 11:31:25.688] [fileLogger] [info] 日志初始化完成
+[2024-01-23 11:31:25.690] [fileLogger] [info] 【开始初始化】
+[2024-01-23 11:31:26.557] [fileLogger] [info] 【收到登录参数】
+[2024-01-23 11:31:26.557] [fileLogger] [info] 
+[2024-01-23 11:31:26.557] [fileLogger] [info] 【开始登录】
+[2024-01-23 11:31:27.953] [fileLogger] [info] 【绝峰用户信息同步结果】：{"code":"1","msg":"处理成功","data":"92015638","realNameInfo":{"thirdUserId":"","isAdult":1,"age":28},"token":"JFMIXTK_3048335_81450_27101110","thirdData":{"thirdName":"jfgame"}}
+[2024-01-23 11:31:28.005] [fileLogger] [info] 【绝峰用户信息同步成功】：
+[2024-01-23 15:47:37.740] [fileLogger] [info] 日志初始化完成
+[2024-01-23 15:47:37.740] [fileLogger] [info] 【开始初始化】
+[2024-01-23 15:47:39.400] [fileLogger] [info] 【收到登录参数】
+[2024-01-23 15:47:39.401] [fileLogger] [info] 
+[2024-01-23 15:47:39.401] [fileLogger] [info] 【开始登录】
+[2024-01-23 15:47:39.664] [fileLogger] [info] 【绝峰用户信息同步结果】：{"code":"1","msg":"处理成功","data":"92015638","realNameInfo":{"thirdUserId":"","isAdult":1,"age":28},"token":"JFMIXTK_3048335_81450_22574478","thirdData":{"thirdName":"jfgame"}}
+[2024-01-23 15:47:39.724] [fileLogger] [info] 【绝峰用户信息同步成功】：
+[2024-01-23 15:48:02.481] [fileLogger] [info] 【开始关闭】
+[2024-01-24 10:30:09.423] [fileLogger] [info] 日志初始化完成
+[2024-01-24 10:30:09.424] [fileLogger] [info] 【开始初始化】
+[2024-01-24 10:30:10.120] [fileLogger] [info] 【收到登录参数】
+[2024-01-24 10:30:10.120] [fileLogger] [info] 
+[2024-01-24 10:30:10.120] [fileLogger] [info] 【开始登录】
+[2024-01-24 10:30:10.382] [fileLogger] [info] 【绝峰用户信息同步结果】：{"code":"1","msg":"处理成功","data":"92015638","realNameInfo":{"thirdUserId":"","isAdult":1,"age":28},"token":"JFMIXTK_3048335_81450_52626171","thirdData":{"thirdName":"jfgame"}}
+[2024-01-24 10:30:10.480] [fileLogger] [info] 【绝峰用户信息同步成功】：
+[2024-01-24 10:30:11.088] [fileLogger] [info] 【收到登录参数】
+[2024-01-24 10:30:11.088] [fileLogger] [info] 
+[2024-01-24 10:30:11.088] [fileLogger] [info] 【开始登录】
+[2024-01-24 10:30:11.361] [fileLogger] [info] 【绝峰用户信息同步结果】：{"code":"1","msg":"处理成功","data":"92015638","realNameInfo":{"thirdUserId":"","isAdult":1,"age":28},"token":"JFMIXTK_3048335_81450_24445048","thirdData":{"thirdName":"jfgame"}}
+[2024-01-24 10:30:11.362] [fileLogger] [info] 【绝峰用户信息同步成功】：
+[2024-01-24 10:30:11.557] [fileLogger] [info] 【收到登录参数】
+[2024-01-24 10:30:11.557] [fileLogger] [info] 
+[2024-01-24 10:30:11.557] [fileLogger] [info] 【开始登录】
+[2024-01-24 10:30:11.804] [fileLogger] [info] 【绝峰用户信息同步结果】：{"code":"1","msg":"处理成功","data":"92015638","realNameInfo":{"thirdUserId":"","isAdult":1,"age":28},"token":"JFMIXTK_3048335_81450_44661822","thirdData":{"thirdName":"jfgame"}}
+[2024-01-24 10:30:11.804] [fileLogger] [info] 【绝峰用户信息同步成功】：
+[2024-01-24 10:30:11.869] [fileLogger] [info] 【收到登录参数】
+[2024-01-24 10:30:11.869] [fileLogger] [info] 
+[2024-01-24 10:30:11.869] [fileLogger] [info] 【开始登录】
+[2024-01-24 10:30:12.116] [fileLogger] [info] 【绝峰用户信息同步结果】：{"code":"1","msg":"处理成功","data":"92015638","realNameInfo":{"thirdUserId":"","isAdult":1,"age":28},"token":"JFMIXTK_3048335_81450_46871414","thirdData":{"thirdName":"jfgame"}}
+[2024-01-24 10:30:12.116] [fileLogger] [info] 【绝峰用户信息同步成功】：
+[2024-01-24 10:30:12.213] [fileLogger] [info] 【收到登录参数】
+[2024-01-24 10:30:12.213] [fileLogger] [info] 
+[2024-01-24 10:30:12.213] [fileLogger] [info] 【开始登录】
+[2024-01-24 10:30:13.031] [fileLogger] [info] 【绝峰用户信息同步结果】：{"code":"1","msg":"处理成功","data":"92015638","realNameInfo":{"thirdUserId":"","isAdult":1,"age":28},"token":"JFMIXTK_3048335_81450_16538576","thirdData":{"thirdName":"jfgame"}}
+[2024-01-24 10:30:13.031] [fileLogger] [info] 【绝峰用户信息同步成功】：
+[2024-01-24 10:30:13.034] [fileLogger] [info] 【收到登录参数】
+[2024-01-24 10:30:13.034] [fileLogger] [info] 
+[2024-01-24 10:30:13.034] [fileLogger] [info] 【开始登录】
+[2024-01-24 10:30:13.279] [fileLogger] [info] 【绝峰用户信息同步结果】：{"code":"1","msg":"处理成功","data":"92015638","realNameInfo":{"thirdUserId":"","isAdult":1,"age":28},"token":"JFMIXTK_3048335_81450_50577416","thirdData":{"thirdName":"jfgame"}}
+[2024-01-24 10:30:13.279] [fileLogger] [info] 【绝峰用户信息同步成功】：
+[2024-01-24 10:30:13.400] [fileLogger] [info] 【收到登录参数】
+[2024-01-24 10:30:13.400] [fileLogger] [info] 
+[2024-01-24 10:30:13.400] [fileLogger] [info] 【开始登录】
+[2024-01-24 10:30:13.647] [fileLogger] [info] 【绝峰用户信息同步结果】：{"code":"1","msg":"处理成功","data":"92015638","realNameInfo":{"thirdUserId":"","isAdult":1,"age":28},"token":"JFMIXTK_3048335_81450_10236683","thirdData":{"thirdName":"jfgame"}}
+[2024-01-24 10:30:13.648] [fileLogger] [info] 【绝峰用户信息同步成功】：
+[2024-01-24 10:30:13.838] [fileLogger] [info] 【收到登录参数】
+[2024-01-24 10:30:13.838] [fileLogger] [info] 
+[2024-01-24 10:30:13.838] [fileLogger] [info] 【开始登录】
+[2024-01-24 10:30:14.077] [fileLogger] [info] 【绝峰用户信息同步结果】：{"code":"1","msg":"处理成功","data":"92015638","realNameInfo":{"thirdUserId":"","isAdult":1,"age":28},"token":"JFMIXTK_3048335_81450_56072271","thirdData":{"thirdName":"jfgame"}}
+[2024-01-24 10:30:14.077] [fileLogger] [info] 【绝峰用户信息同步成功】：
+[2024-01-24 10:30:14.306] [fileLogger] [info] 【收到登录参数】
+[2024-01-24 10:30:14.306] [fileLogger] [info] 
+[2024-01-24 10:30:14.306] [fileLogger] [info] 【开始登录】
+[2024-01-24 10:30:14.552] [fileLogger] [info] 【绝峰用户信息同步结果】：{"code":"1","msg":"处理成功","data":"92015638","realNameInfo":{"thirdUserId":"","isAdult":1,"age":28},"token":"JFMIXTK_3048335_81450_72776675","thirdData":{"thirdName":"jfgame"}}
+[2024-01-24 10:30:14.552] [fileLogger] [info] 【绝峰用户信息同步成功】：
+[2024-01-24 10:30:14.651] [fileLogger] [info] 【收到登录参数】
+[2024-01-24 10:30:14.651] [fileLogger] [info] 
+[2024-01-24 10:30:14.651] [fileLogger] [info] 【开始登录】
+[2024-01-24 10:30:14.896] [fileLogger] [info] 【绝峰用户信息同步结果】：{"code":"1","msg":"处理成功","data":"92015638","realNameInfo":{"thirdUserId":"","isAdult":1,"age":28},"token":"JFMIXTK_3048335_81450_05848603","thirdData":{"thirdName":"jfgame"}}
+[2024-01-24 10:30:14.896] [fileLogger] [info] 【绝峰用户信息同步成功】：
+[2024-01-24 10:31:18.902] [fileLogger] [info] 【开始关闭】
+[2024-01-24 18:20:59.447] [fileLogger] [info] 日志初始化完成
+[2024-01-24 18:20:59.448] [fileLogger] [info] 【开始初始化】
+[2024-01-24 18:21:00.589] [fileLogger] [info] 【收到登录参数】
+[2024-01-24 18:21:00.589] [fileLogger] [info] 
+[2024-01-24 18:21:00.589] [fileLogger] [info] 【开始登录】
+[2024-01-24 18:21:00.844] [fileLogger] [info] 【绝峰用户信息同步结果】：{"code":"1","msg":"处理成功","data":"92015638","realNameInfo":{"thirdUserId":"","isAdult":1,"age":28},"token":"JFMIXTK_3048335_81450_30273420","thirdData":{"thirdName":"jfgame"}}
+[2024-01-24 18:21:00.905] [fileLogger] [info] 【绝峰用户信息同步成功】：
+[2024-01-24 18:21:01.431] [fileLogger] [info] 【收到登录参数】
+[2024-01-24 18:21:01.431] [fileLogger] [info] 
+[2024-01-24 18:21:01.431] [fileLogger] [info] 【开始登录】
+[2024-01-24 18:21:01.686] [fileLogger] [info] 【绝峰用户信息同步结果】：{"code":"1","msg":"处理成功","data":"92015638","realNameInfo":{"thirdUserId":"","isAdult":1,"age":28},"token":"JFMIXTK_3048335_81450_25385375","thirdData":{"thirdName":"jfgame"}}
+[2024-01-24 18:21:01.687] [fileLogger] [info] 【绝峰用户信息同步成功】：
+[2024-01-24 18:21:01.963] [fileLogger] [info] 【收到登录参数】
+[2024-01-24 18:21:01.963] [fileLogger] [info] 
+[2024-01-24 18:21:01.963] [fileLogger] [info] 【开始登录】
+[2024-01-24 18:21:02.217] [fileLogger] [info] 【绝峰用户信息同步结果】：{"code":"1","msg":"处理成功","data":"92015638","realNameInfo":{"thirdUserId":"","isAdult":1,"age":28},"token":"JFMIXTK_3048335_81450_78870723","thirdData":{"thirdName":"jfgame"}}
+[2024-01-24 18:21:02.218] [fileLogger] [info] 【绝峰用户信息同步成功】：
+[2024-01-24 18:21:02.432] [fileLogger] [info] 【收到登录参数】
+[2024-01-24 18:21:02.432] [fileLogger] [info] 
+[2024-01-24 18:21:02.432] [fileLogger] [info] 【开始登录】
+[2024-01-24 18:21:02.676] [fileLogger] [info] 【绝峰用户信息同步结果】：{"code":"1","msg":"处理成功","data":"92015638","realNameInfo":{"thirdUserId":"","isAdult":1,"age":28},"token":"JFMIXTK_3048335_81450_35812333","thirdData":{"thirdName":"jfgame"}}
+[2024-01-24 18:21:02.677] [fileLogger] [info] 【绝峰用户信息同步成功】：
+[2024-01-24 18:21:02.838] [fileLogger] [info] 【收到登录参数】
+[2024-01-24 18:21:02.838] [fileLogger] [info] 
+[2024-01-24 18:21:02.838] [fileLogger] [info] 【开始登录】
+[2024-01-24 18:21:03.070] [fileLogger] [info] 【绝峰用户信息同步结果】：{"code":"1","msg":"处理成功","data":"92015638","realNameInfo":{"thirdUserId":"","isAdult":1,"age":28},"token":"JFMIXTK_3048335_81450_73535865","thirdData":{"thirdName":"jfgame"}}
+[2024-01-24 18:21:03.070] [fileLogger] [info] 【绝峰用户信息同步成功】：
+[2024-01-24 18:21:03.213] [fileLogger] [info] 【收到登录参数】
+[2024-01-24 18:21:03.213] [fileLogger] [info] 
+[2024-01-24 18:21:03.213] [fileLogger] [info] 【开始登录】
+[2024-01-24 18:21:03.450] [fileLogger] [info] 【绝峰用户信息同步结果】：{"code":"1","msg":"处理成功","data":"92015638","realNameInfo":{"thirdUserId":"","isAdult":1,"age":28},"token":"JFMIXTK_3048335_81450_57422384","thirdData":{"thirdName":"jfgame"}}
+[2024-01-24 18:21:03.450] [fileLogger] [info] 【绝峰用户信息同步成功】：
+[2024-01-24 18:21:03.619] [fileLogger] [info] 【收到登录参数】
+[2024-01-24 18:21:03.619] [fileLogger] [info] 
+[2024-01-24 18:21:03.619] [fileLogger] [info] 【开始登录】
+[2024-01-24 18:21:03.858] [fileLogger] [info] 【绝峰用户信息同步结果】：{"code":"1","msg":"处理成功","data":"92015638","realNameInfo":{"thirdUserId":"","isAdult":1,"age":28},"token":"JFMIXTK_3048335_81450_03578351","thirdData":{"thirdName":"jfgame"}}
+[2024-01-24 18:21:03.858] [fileLogger] [info] 【绝峰用户信息同步成功】：
+[2024-01-24 18:21:04.400] [fileLogger] [info] 【收到登录参数】
+[2024-01-24 18:21:04.400] [fileLogger] [info] 
+[2024-01-24 18:21:04.400] [fileLogger] [info] 【开始登录】
+[2024-01-24 18:21:04.651] [fileLogger] [info] 【绝峰用户信息同步结果】：{"code":"1","msg":"处理成功","data":"92015638","realNameInfo":{"thirdUserId":"","isAdult":1,"age":28},"token":"JFMIXTK_3048335_81450_66514854","thirdData":{"thirdName":"jfgame"}}
+[2024-01-24 18:21:04.651] [fileLogger] [info] 【绝峰用户信息同步成功】：
+[2024-01-24 18:21:05.087] [fileLogger] [info] 【收到登录参数】
+[2024-01-24 18:21:05.087] [fileLogger] [info] 
+[2024-01-24 18:21:05.087] [fileLogger] [info] 【开始登录】
+[2024-01-24 18:21:05.322] [fileLogger] [info] 【绝峰用户信息同步结果】：{"code":"1","msg":"处理成功","data":"92015638","realNameInfo":{"thirdUserId":"","isAdult":1,"age":28},"token":"JFMIXTK_3048335_81450_15568343","thirdData":{"thirdName":"jfgame"}}
+[2024-01-24 18:21:05.322] [fileLogger] [info] 【绝峰用户信息同步成功】：
+[2024-01-24 18:21:05.651] [fileLogger] [info] 【收到登录参数】
+[2024-01-24 18:21:05.651] [fileLogger] [info] 
+[2024-01-24 18:21:05.651] [fileLogger] [info] 【开始登录】
+[2024-01-24 18:21:05.907] [fileLogger] [info] 【绝峰用户信息同步结果】：{"code":"1","msg":"处理成功","data":"92015638","realNameInfo":{"thirdUserId":"","isAdult":1,"age":28},"token":"JFMIXTK_3048335_81450_04602016","thirdData":{"thirdName":"jfgame"}}
+[2024-01-24 18:21:05.907] [fileLogger] [info] 【绝峰用户信息同步成功】：
+[2024-01-24 18:21:05.994] [fileLogger] [info] 【收到登录参数】
+[2024-01-24 18:21:05.994] [fileLogger] [info] 
+[2024-01-24 18:21:05.995] [fileLogger] [info] 【开始登录】
+[2024-01-24 18:21:06.230] [fileLogger] [info] 【绝峰用户信息同步结果】：{"code":"1","msg":"处理成功","data":"92015638","realNameInfo":{"thirdUserId":"","isAdult":1,"age":28},"token":"JFMIXTK_3048335_81450_64545220","thirdData":{"thirdName":"jfgame"}}
+[2024-01-24 18:21:06.230] [fileLogger] [info] 【绝峰用户信息同步成功】：
+[2024-01-24 18:25:45.222] [fileLogger] [info] 【开始初始化】
+[2024-01-24 18:25:45.881] [fileLogger] [info] 【收到登录参数】
+[2024-01-24 18:25:45.881] [fileLogger] [info] 
+[2024-01-24 18:25:45.881] [fileLogger] [info] 【开始登录】
+[2024-01-24 18:25:46.120] [fileLogger] [info] 【绝峰用户信息同步结果】：{"code":"1","msg":"处理成功","data":"92015638","realNameInfo":{"thirdUserId":"","isAdult":1,"age":28},"token":"JFMIXTK_3048335_81450_15513282","thirdData":{"thirdName":"jfgame"}}
+[2024-01-24 18:25:46.161] [fileLogger] [info] 【绝峰用户信息同步成功】：
+[2024-01-24 18:25:46.201] [fileLogger] [info] 【收到登录参数】
+[2024-01-24 18:25:46.202] [fileLogger] [info] 
+[2024-01-24 18:25:46.202] [fileLogger] [info] 【开始登录】
+[2024-01-24 18:25:46.442] [fileLogger] [info] 【绝峰用户信息同步结果】：{"code":"1","msg":"处理成功","data":"92015638","realNameInfo":{"thirdUserId":"","isAdult":1,"age":28},"token":"JFMIXTK_3048335_81450_83616834","thirdData":{"thirdName":"jfgame"}}
+[2024-01-24 18:25:46.443] [fileLogger] [info] 【绝峰用户信息同步成功】：
+[2024-01-24 18:25:46.481] [fileLogger] [info] 【收到登录参数】
+[2024-01-24 18:25:46.482] [fileLogger] [info] 
+[2024-01-24 18:25:46.482] [fileLogger] [info] 【开始登录】
+[2024-01-24 18:25:46.720] [fileLogger] [info] 【绝峰用户信息同步结果】：{"code":"1","msg":"处理成功","data":"92015638","realNameInfo":{"thirdUserId":"","isAdult":1,"age":28},"token":"JFMIXTK_3048335_81450_31465125","thirdData":{"thirdName":"jfgame"}}
+[2024-01-24 18:25:46.721] [fileLogger] [info] 【绝峰用户信息同步成功】：
+[2024-01-24 18:25:46.725] [fileLogger] [info] 【收到登录参数】
+[2024-01-24 18:25:46.725] [fileLogger] [info] 
+[2024-01-24 18:25:46.725] [fileLogger] [info] 【开始登录】
+[2024-01-24 18:25:46.964] [fileLogger] [info] 【绝峰用户信息同步结果】：{"code":"1","msg":"处理成功","data":"92015638","realNameInfo":{"thirdUserId":"","isAdult":1,"age":28},"token":"JFMIXTK_3048335_81450_32526674","thirdData":{"thirdName":"jfgame"}}
+[2024-01-24 18:25:46.964] [fileLogger] [info] 【绝峰用户信息同步成功】：
+[2024-01-24 18:25:46.969] [fileLogger] [info] 【收到登录参数】
+[2024-01-24 18:25:46.970] [fileLogger] [info] 
+[2024-01-24 18:25:46.970] [fileLogger] [info] 【开始登录】
+[2024-01-24 18:25:47.226] [fileLogger] [info] 【绝峰用户信息同步结果】：{"code":"1","msg":"处理成功","data":"92015638","realNameInfo":{"thirdUserId":"","isAdult":1,"age":28},"token":"JFMIXTK_3048335_81450_78212701","thirdData":{"thirdName":"jfgame"}}
+[2024-01-24 18:25:47.226] [fileLogger] [info] 【绝峰用户信息同步成功】：
+[2024-01-24 18:25:47.234] [fileLogger] [info] 【收到登录参数】
+[2024-01-24 18:25:47.234] [fileLogger] [info] 
+[2024-01-24 18:25:47.234] [fileLogger] [info] 【开始登录】
+[2024-01-24 18:25:47.473] [fileLogger] [info] 【绝峰用户信息同步结果】：{"code":"1","msg":"处理成功","data":"92015638","realNameInfo":{"thirdUserId":"","isAdult":1,"age":28},"token":"JFMIXTK_3048335_81450_04158414","thirdData":{"thirdName":"jfgame"}}
+[2024-01-24 18:25:47.473] [fileLogger] [info] 【绝峰用户信息同步成功】：
+[2024-01-24 18:25:47.481] [fileLogger] [info] 【收到登录参数】
+[2024-01-24 18:25:47.481] [fileLogger] [info] 
+[2024-01-24 18:25:47.481] [fileLogger] [info] 【开始登录】
+[2024-01-24 18:25:47.718] [fileLogger] [info] 【绝峰用户信息同步结果】：{"code":"1","msg":"处理成功","data":"92015638","realNameInfo":{"thirdUserId":"","isAdult":1,"age":28},"token":"JFMIXTK_3048335_81450_04127043","thirdData":{"thirdName":"jfgame"}}
+[2024-01-24 18:25:47.718] [fileLogger] [info] 【绝峰用户信息同步成功】：
+[2024-01-24 18:25:47.724] [fileLogger] [info] 【收到登录参数】
+[2024-01-24 18:25:47.724] [fileLogger] [info] 
+[2024-01-24 18:25:47.724] [fileLogger] [info] 【开始登录】
+[2024-01-24 18:25:47.978] [fileLogger] [info] 【绝峰用户信息同步结果】：{"code":"1","msg":"处理成功","data":"92015638","realNameInfo":{"thirdUserId":"","isAdult":1,"age":28},"token":"JFMIXTK_3048335_81450_23713601","thirdData":{"thirdName":"jfgame"}}
+[2024-01-24 18:25:47.979] [fileLogger] [info] 【绝峰用户信息同步成功】：
+[2024-01-24 18:25:48.003] [fileLogger] [info] 【收到登录参数】
+[2024-01-24 18:25:48.003] [fileLogger] [info] 
+[2024-01-24 18:25:48.003] [fileLogger] [info] 【开始登录】
+[2024-01-24 18:25:48.257] [fileLogger] [info] 【绝峰用户信息同步结果】：{"code":"1","msg":"处理成功","data":"92015638","realNameInfo":{"thirdUserId":"","isAdult":1,"age":28},"token":"JFMIXTK_3048335_81450_40205260","thirdData":{"thirdName":"jfgame"}}
+[2024-01-24 18:25:48.257] [fileLogger] [info] 【绝峰用户信息同步成功】：
+[2024-01-24 18:25:48.315] [fileLogger] [info] 【收到登录参数】
+[2024-01-24 18:25:48.315] [fileLogger] [info] 
+[2024-01-24 18:25:48.315] [fileLogger] [info] 【开始登录】
+[2024-01-24 18:25:48.591] [fileLogger] [info] 【绝峰用户信息同步结果】：{"code":"1","msg":"处理成功","data":"92015638","realNameInfo":{"thirdUserId":"","isAdult":1,"age":28},"token":"JFMIXTK_3048335_81450_53086223","thirdData":{"thirdName":"jfgame"}}
+[2024-01-24 18:25:48.592] [fileLogger] [info] 【绝峰用户信息同步成功】：
+[2024-01-24 18:25:48.599] [fileLogger] [info] 【收到登录参数】
+[2024-01-24 18:25:48.599] [fileLogger] [info] 
+[2024-01-24 18:25:48.600] [fileLogger] [info] 【开始登录】
+[2024-01-24 18:25:48.848] [fileLogger] [info] 【绝峰用户信息同步结果】：{"code":"1","msg":"处理成功","data":"92015638","realNameInfo":{"thirdUserId":"","isAdult":1,"age":28},"token":"JFMIXTK_3048335_81450_68407427","thirdData":{"thirdName":"jfgame"}}
+[2024-01-24 18:25:48.849] [fileLogger] [info] 【绝峰用户信息同步成功】：
+[2024-01-24 18:25:48.854] [fileLogger] [info] 【收到登录参数】
+[2024-01-24 18:25:48.854] [fileLogger] [info] 
+[2024-01-24 18:25:48.854] [fileLogger] [info] 【开始登录】
+[2024-01-24 18:25:49.092] [fileLogger] [info] 【绝峰用户信息同步结果】：{"code":"1","msg":"处理成功","data":"92015638","realNameInfo":{"thirdUserId":"","isAdult":1,"age":28},"token":"JFMIXTK_3048335_81450_20213021","thirdData":{"thirdName":"jfgame"}}
+[2024-01-24 18:25:49.093] [fileLogger] [info] 【绝峰用户信息同步成功】：
+[2024-01-24 18:25:49.100] [fileLogger] [info] 【收到登录参数】
+[2024-01-24 18:25:49.100] [fileLogger] [info] 
+[2024-01-24 18:25:49.100] [fileLogger] [info] 【开始登录】
+[2024-01-24 18:25:49.345] [fileLogger] [info] 【绝峰用户信息同步结果】：{"code":"1","msg":"处理成功","data":"92015638","realNameInfo":{"thirdUserId":"","isAdult":1,"age":28},"token":"JFMIXTK_3048335_81450_27861017","thirdData":{"thirdName":"jfgame"}}
+[2024-01-24 18:25:49.346] [fileLogger] [info] 【绝峰用户信息同步成功】：
+[2024-01-24 18:26:20.658] [fileLogger] [info] 日志初始化完成
+[2024-01-24 18:26:20.661] [fileLogger] [info] 【开始关闭】
+[2024-01-24 18:26:24.932] [fileLogger] [info] 【开始初始化】
+[2024-01-24 18:26:26.588] [fileLogger] [info] 【收到登录参数】
+[2024-01-24 18:26:26.588] [fileLogger] [info] 
+[2024-01-24 18:26:26.588] [fileLogger] [info] 【开始登录】
+[2024-01-24 18:26:26.834] [fileLogger] [info] 【绝峰用户信息同步结果】：{"code":"1","msg":"处理成功","data":"92015638","realNameInfo":{"thirdUserId":"","isAdult":1,"age":28},"token":"JFMIXTK_3048335_81450_68184883","thirdData":{"thirdName":"jfgame"}}
+[2024-01-24 18:26:26.889] [fileLogger] [info] 【绝峰用户信息同步成功】：
+[2024-01-24 18:26:31.619] [fileLogger] [info] 【开始关闭】
+[2024-01-24 18:26:32.807] [fileLogger] [info] 【收到登录参数】
+[2024-01-24 18:26:32.807] [fileLogger] [info] 
+[2024-01-24 18:26:32.807] [fileLogger] [info] 【开始登录】
+[2024-01-24 18:26:33.056] [fileLogger] [info] 【绝峰用户信息同步结果】：{"code":"1","msg":"处理成功","data":"92015638","realNameInfo":{"thirdUserId":"","isAdult":1,"age":28},"token":"JFMIXTK_3048335_81450_06073463","thirdData":{"thirdName":"jfgame"}}
+[2024-01-24 18:26:33.056] [fileLogger] [info] 【绝峰用户信息同步成功】：
+[2024-01-24 18:26:34.651] [fileLogger] [info] 【收到登录参数】
+[2024-01-24 18:26:34.651] [fileLogger] [info] 
+[2024-01-24 18:26:34.651] [fileLogger] [info] 【开始登录】
+[2024-01-24 18:26:34.900] [fileLogger] [info] 【绝峰用户信息同步结果】：{"code":"1","msg":"处理成功","data":"92015638","realNameInfo":{"thirdUserId":"","isAdult":1,"age":28},"token":"JFMIXTK_3048335_81450_87047311","thirdData":{"thirdName":"jfgame"}}
+[2024-01-24 18:26:34.901] [fileLogger] [info] 【绝峰用户信息同步成功】：
+[2024-01-24 18:26:34.994] [fileLogger] [info] 【收到登录参数】
+[2024-01-24 18:26:34.994] [fileLogger] [info] 
+[2024-01-24 18:26:34.994] [fileLogger] [info] 【开始登录】
+[2024-01-24 18:26:35.229] [fileLogger] [info] 【绝峰用户信息同步结果】：{"code":"1","msg":"处理成功","data":"92015638","realNameInfo":{"thirdUserId":"","isAdult":1,"age":28},"token":"JFMIXTK_3048335_81450_58720346","thirdData":{"thirdName":"jfgame"}}
+[2024-01-24 18:26:35.229] [fileLogger] [info] 【绝峰用户信息同步成功】：
+[2024-01-24 18:26:35.400] [fileLogger] [info] 【收到登录参数】
+[2024-01-24 18:26:35.400] [fileLogger] [info] 
+[2024-01-24 18:26:35.400] [fileLogger] [info] 【开始登录】
+[2024-01-24 18:26:35.641] [fileLogger] [info] 【绝峰用户信息同步结果】：{"code":"1","msg":"处理成功","data":"92015638","realNameInfo":{"thirdUserId":"","isAdult":1,"age":28},"token":"JFMIXTK_3048335_81450_10067848","thirdData":{"thirdName":"jfgame"}}
+[2024-01-24 18:26:35.642] [fileLogger] [info] 【绝峰用户信息同步成功】：
+[2024-01-24 18:26:35.681] [fileLogger] [info] 【收到登录参数】
+[2024-01-24 18:26:35.681] [fileLogger] [info] 
+[2024-01-24 18:26:35.681] [fileLogger] [info] 【开始登录】
+[2024-01-24 18:26:35.918] [fileLogger] [info] 【绝峰用户信息同步结果】：{"code":"1","msg":"处理成功","data":"92015638","realNameInfo":{"thirdUserId":"","isAdult":1,"age":28},"token":"JFMIXTK_3048335_81450_01276572","thirdData":{"thirdName":"jfgame"}}
+[2024-01-24 18:26:35.918] [fileLogger] [info] 【绝峰用户信息同步成功】：
+[2024-01-24 18:26:36.056] [fileLogger] [info] 【收到登录参数】
+[2024-01-24 18:26:36.056] [fileLogger] [info] 
+[2024-01-24 18:26:36.056] [fileLogger] [info] 【开始登录】
+[2024-01-24 18:26:36.301] [fileLogger] [info] 【绝峰用户信息同步结果】：{"code":"1","msg":"处理成功","data":"92015638","realNameInfo":{"thirdUserId":"","isAdult":1,"age":28},"token":"JFMIXTK_3048335_81450_08038327","thirdData":{"thirdName":"jfgame"}}
+[2024-01-24 18:26:36.301] [fileLogger] [info] 【绝峰用户信息同步成功】：
+[2024-01-24 18:26:36.306] [fileLogger] [info] 【收到登录参数】
+[2024-01-24 18:26:36.306] [fileLogger] [info] 
+[2024-01-24 18:26:36.306] [fileLogger] [info] 【开始登录】
+[2024-01-24 18:26:36.536] [fileLogger] [info] 【绝峰用户信息同步结果】：{"code":"1","msg":"处理成功","data":"92015638","realNameInfo":{"thirdUserId":"","isAdult":1,"age":28},"token":"JFMIXTK_3048335_81450_75014185","thirdData":{"thirdName":"jfgame"}}
+[2024-01-24 18:26:36.536] [fileLogger] [info] 【绝峰用户信息同步成功】：
+[2024-01-24 18:26:36.588] [fileLogger] [info] 【收到登录参数】
+[2024-01-24 18:26:36.588] [fileLogger] [info] 
+[2024-01-24 18:26:36.588] [fileLogger] [info] 【开始登录】
+[2024-01-24 18:26:36.826] [fileLogger] [info] 【绝峰用户信息同步结果】：{"code":"1","msg":"处理成功","data":"92015638","realNameInfo":{"thirdUserId":"","isAdult":1,"age":28},"token":"JFMIXTK_3048335_81450_23714441","thirdData":{"thirdName":"jfgame"}}
+[2024-01-24 18:26:36.826] [fileLogger] [info] 【绝峰用户信息同步成功】：
+[2024-01-24 18:26:36.869] [fileLogger] [info] 【收到登录参数】
+[2024-01-24 18:26:36.869] [fileLogger] [info] 
+[2024-01-24 18:26:36.869] [fileLogger] [info] 【开始登录】
+[2024-01-24 18:26:37.097] [fileLogger] [info] 【绝峰用户信息同步结果】：{"code":"1","msg":"处理成功","data":"92015638","realNameInfo":{"thirdUserId":"","isAdult":1,"age":28},"token":"JFMIXTK_3048335_81450_17284582","thirdData":{"thirdName":"jfgame"}}
+[2024-01-24 18:26:37.097] [fileLogger] [info] 【绝峰用户信息同步成功】：
+[2024-01-24 18:26:37.101] [fileLogger] [info] 【收到登录参数】
+[2024-01-24 18:26:37.102] [fileLogger] [info] 
+[2024-01-24 18:26:37.102] [fileLogger] [info] 【开始登录】
+[2024-01-24 18:26:37.338] [fileLogger] [info] 【绝峰用户信息同步结果】：{"code":"1","msg":"处理成功","data":"92015638","realNameInfo":{"thirdUserId":"","isAdult":1,"age":28},"token":"JFMIXTK_3048335_81450_56164564","thirdData":{"thirdName":"jfgame"}}
+[2024-01-24 18:26:37.338] [fileLogger] [info] 【绝峰用户信息同步成功】：
+[2024-01-24 18:26:37.369] [fileLogger] [info] 【收到登录参数】
+[2024-01-24 18:26:37.369] [fileLogger] [info] 
+[2024-01-24 18:26:37.369] [fileLogger] [info] 【开始登录】
+[2024-01-24 18:26:37.618] [fileLogger] [info] 【绝峰用户信息同步结果】：{"code":"1","msg":"处理成功","data":"92015638","realNameInfo":{"thirdUserId":"","isAdult":1,"age":28},"token":"JFMIXTK_3048335_81450_41814648","thirdData":{"thirdName":"jfgame"}}
+[2024-01-24 18:26:37.618] [fileLogger] [info] 【绝峰用户信息同步成功】：
+[2024-01-24 18:26:37.623] [fileLogger] [info] 【收到登录参数】
+[2024-01-24 18:26:37.623] [fileLogger] [info] 
+[2024-01-24 18:26:37.623] [fileLogger] [info] 【开始登录】
+[2024-01-24 18:26:37.864] [fileLogger] [info] 【绝峰用户信息同步结果】：{"code":"1","msg":"处理成功","data":"92015638","realNameInfo":{"thirdUserId":"","isAdult":1,"age":28},"token":"JFMIXTK_3048335_81450_42003373","thirdData":{"thirdName":"jfgame"}}
+[2024-01-24 18:26:37.864] [fileLogger] [info] 【绝峰用户信息同步成功】：
+[2024-01-24 18:36:19.399] [fileLogger] [info] 【开始初始化】
+[2024-01-24 18:36:20.126] [fileLogger] [info] 【收到登录参数】
+[2024-01-24 18:36:20.126] [fileLogger] [info] 
+[2024-01-24 18:36:20.126] [fileLogger] [info] 【开始登录】
+[2024-01-24 18:36:20.395] [fileLogger] [info] 【绝峰用户信息同步结果】：{"code":"1","msg":"处理成功","data":"92015638","realNameInfo":{"thirdUserId":"","isAdult":1,"age":28},"token":"JFMIXTK_3048335_81450_81871765","thirdData":{"thirdName":"jfgame"}}
+[2024-01-24 18:36:20.436] [fileLogger] [info] 【绝峰用户信息同步成功】：
+[2024-01-24 18:41:41.946] [fileLogger] [info] 【开始初始化】
+[2024-01-24 18:41:42.607] [fileLogger] [info] 【收到登录参数】
+[2024-01-24 18:41:42.607] [fileLogger] [info] 
+[2024-01-24 18:41:42.608] [fileLogger] [info] 【开始登录】
+[2024-01-24 18:41:42.858] [fileLogger] [info] 【绝峰用户信息同步结果】：{"code":"1","msg":"处理成功","data":"92015638","realNameInfo":{"thirdUserId":"","isAdult":1,"age":28},"token":"JFMIXTK_3048335_81450_61803548","thirdData":{"thirdName":"jfgame"}}
+[2024-01-24 18:41:42.896] [fileLogger] [info] 【绝峰用户信息同步成功】：
+[2024-01-24 18:41:42.900] [fileLogger] [info] 【收到登录参数】
+[2024-01-24 18:41:42.900] [fileLogger] [info] 
+[2024-01-24 18:41:42.900] [fileLogger] [info] 【开始登录】
+[2024-01-24 18:41:43.148] [fileLogger] [info] 【绝峰用户信息同步结果】：{"code":"1","msg":"处理成功","data":"92015638","realNameInfo":{"thirdUserId":"","isAdult":1,"age":28},"token":"JFMIXTK_3048335_81450_60630324","thirdData":{"thirdName":"jfgame"}}
+[2024-01-24 18:41:43.148] [fileLogger] [info] 【绝峰用户信息同步成功】：
+[2024-01-24 18:41:43.157] [fileLogger] [info] 【收到登录参数】
+[2024-01-24 18:41:43.158] [fileLogger] [info] 
+[2024-01-24 18:41:43.158] [fileLogger] [info] 【开始登录】
+[2024-01-24 18:41:43.415] [fileLogger] [info] 【绝峰用户信息同步结果】：{"code":"1","msg":"处理成功","data":"92015638","realNameInfo":{"thirdUserId":"","isAdult":1,"age":28},"token":"JFMIXTK_3048335_81450_76550240","thirdData":{"thirdName":"jfgame"}}
+[2024-01-24 18:41:43.416] [fileLogger] [info] 【绝峰用户信息同步成功】：
+[2024-01-24 18:41:43.420] [fileLogger] [info] 【收到登录参数】
+[2024-01-24 18:41:43.420] [fileLogger] [info] 
+[2024-01-24 18:41:43.420] [fileLogger] [info] 【开始登录】
+[2024-01-24 18:41:43.665] [fileLogger] [info] 【绝峰用户信息同步结果】：{"code":"1","msg":"处理成功","data":"92015638","realNameInfo":{"thirdUserId":"","isAdult":1,"age":28},"token":"JFMIXTK_3048335_81450_43648878","thirdData":{"thirdName":"jfgame"}}
+[2024-01-24 18:41:43.666] [fileLogger] [info] 【绝峰用户信息同步成功】：
+[2024-01-24 18:41:43.670] [fileLogger] [info] 【收到登录参数】
+[2024-01-24 18:41:43.670] [fileLogger] [info] 
+[2024-01-24 18:41:43.670] [fileLogger] [info] 【开始登录】
+[2024-01-24 18:41:43.905] [fileLogger] [info] 【绝峰用户信息同步结果】：{"code":"1","msg":"处理成功","data":"92015638","realNameInfo":{"thirdUserId":"","isAdult":1,"age":28},"token":"JFMIXTK_3048335_81450_21160663","thirdData":{"thirdName":"jfgame"}}
+[2024-01-24 18:41:43.906] [fileLogger] [info] 【绝峰用户信息同步成功】：
+[2024-01-24 18:41:43.911] [fileLogger] [info] 【收到登录参数】
+[2024-01-24 18:41:43.911] [fileLogger] [info] 
+[2024-01-24 18:41:43.911] [fileLogger] [info] 【开始登录】
+[2024-01-24 18:41:44.155] [fileLogger] [info] 【绝峰用户信息同步结果】：{"code":"1","msg":"处理成功","data":"92015638","realNameInfo":{"thirdUserId":"","isAdult":1,"age":28},"token":"JFMIXTK_3048335_81450_46561853","thirdData":{"thirdName":"jfgame"}}
+[2024-01-24 18:41:44.155] [fileLogger] [info] 【绝峰用户信息同步成功】：
+[2024-01-24 18:41:44.163] [fileLogger] [info] 【收到登录参数】
+[2024-01-24 18:41:44.163] [fileLogger] [info] 
+[2024-01-24 18:41:44.163] [fileLogger] [info] 【开始登录】
+[2024-01-24 18:41:44.441] [fileLogger] [info] 【绝峰用户信息同步结果】：{"code":"1","msg":"处理成功","data":"92015638","realNameInfo":{"thirdUserId":"","isAdult":1,"age":28},"token":"JFMIXTK_3048335_81450_04833258","thirdData":{"thirdName":"jfgame"}}
+[2024-01-24 18:41:44.441] [fileLogger] [info] 【绝峰用户信息同步成功】：
+[2024-01-24 18:41:44.446] [fileLogger] [info] 【收到登录参数】
+[2024-01-24 18:41:44.446] [fileLogger] [info] 
+[2024-01-24 18:41:44.446] [fileLogger] [info] 【开始登录】
+[2024-01-24 18:41:44.684] [fileLogger] [info] 【绝峰用户信息同步结果】：{"code":"1","msg":"处理成功","data":"92015638","realNameInfo":{"thirdUserId":"","isAdult":1,"age":28},"token":"JFMIXTK_3048335_81450_36415562","thirdData":{"thirdName":"jfgame"}}
+[2024-01-24 18:41:44.685] [fileLogger] [info] 【绝峰用户信息同步成功】：
+[2024-01-24 18:41:44.696] [fileLogger] [info] 【收到登录参数】
+[2024-01-24 18:41:44.696] [fileLogger] [info] 
+[2024-01-24 18:41:44.696] [fileLogger] [info] 【开始登录】
+[2024-01-24 18:41:44.943] [fileLogger] [info] 【绝峰用户信息同步结果】：{"code":"1","msg":"处理成功","data":"92015638","realNameInfo":{"thirdUserId":"","isAdult":1,"age":28},"token":"JFMIXTK_3048335_81450_43641157","thirdData":{"thirdName":"jfgame"}}
+[2024-01-24 18:41:44.943] [fileLogger] [info] 【绝峰用户信息同步成功】：
+[2024-01-24 18:41:44.951] [fileLogger] [info] 【收到登录参数】
+[2024-01-24 18:41:44.951] [fileLogger] [info] 
+[2024-01-24 18:41:44.951] [fileLogger] [info] 【开始登录】
+[2024-01-24 18:41:45.198] [fileLogger] [info] 【绝峰用户信息同步结果】：{"code":"1","msg":"处理成功","data":"92015638","realNameInfo":{"thirdUserId":"","isAdult":1,"age":28},"token":"JFMIXTK_3048335_81450_36356774","thirdData":{"thirdName":"jfgame"}}
+[2024-01-24 18:41:45.199] [fileLogger] [info] 【绝峰用户信息同步成功】：
+[2024-01-24 18:43:07.338] [fileLogger] [info] 日志初始化完成
+[2024-01-24 18:43:07.341] [fileLogger] [info] 【开始初始化】
+[2024-01-24 18:43:08.432] [fileLogger] [info] 【收到登录参数】
+[2024-01-24 18:43:08.432] [fileLogger] [info] 
+[2024-01-24 18:43:08.432] [fileLogger] [info] 【开始登录】
+[2024-01-24 18:43:08.694] [fileLogger] [info] 【绝峰用户信息同步结果】：{"code":"1","msg":"处理成功","data":"92015638","realNameInfo":{"thirdUserId":"","isAdult":1,"age":28},"token":"JFMIXTK_3048335_81450_26271822","thirdData":{"thirdName":"jfgame"}}
+[2024-01-24 18:43:08.774] [fileLogger] [info] 【绝峰用户信息同步成功】：
+[2024-01-24 18:43:09.495] [fileLogger] [info] 【收到登录参数】
+[2024-01-24 18:43:09.495] [fileLogger] [info] 
+[2024-01-24 18:43:09.495] [fileLogger] [info] 【开始登录】
+[2024-01-24 18:43:09.745] [fileLogger] [info] 【绝峰用户信息同步结果】：{"code":"1","msg":"处理成功","data":"92015638","realNameInfo":{"thirdUserId":"","isAdult":1,"age":28},"token":"JFMIXTK_3048335_81450_58787275","thirdData":{"thirdName":"jfgame"}}
+[2024-01-24 18:43:09.745] [fileLogger] [info] 【绝峰用户信息同步成功】：
+[2024-01-24 18:43:10.213] [fileLogger] [info] 【收到登录参数】
+[2024-01-24 18:43:10.214] [fileLogger] [info] 
+[2024-01-24 18:43:10.214] [fileLogger] [info] 【开始登录】
+[2024-01-24 18:43:10.468] [fileLogger] [info] 【绝峰用户信息同步结果】：{"code":"1","msg":"处理成功","data":"92015638","realNameInfo":{"thirdUserId":"","isAdult":1,"age":28},"token":"JFMIXTK_3048335_81450_82144271","thirdData":{"thirdName":"jfgame"}}
+[2024-01-24 18:43:10.468] [fileLogger] [info] 【绝峰用户信息同步成功】：
+[2024-01-24 18:43:10.525] [fileLogger] [info] 【收到登录参数】
+[2024-01-24 18:43:10.525] [fileLogger] [info] 
+[2024-01-24 18:43:10.525] [fileLogger] [info] 【开始登录】
+[2024-01-24 18:43:10.777] [fileLogger] [info] 【绝峰用户信息同步结果】：{"code":"1","msg":"处理成功","data":"92015638","realNameInfo":{"thirdUserId":"","isAdult":1,"age":28},"token":"JFMIXTK_3048335_81450_34685047","thirdData":{"thirdName":"jfgame"}}
+[2024-01-24 18:43:10.777] [fileLogger] [info] 【绝峰用户信息同步成功】：
+[2024-01-24 18:43:10.837] [fileLogger] [info] 【收到登录参数】
+[2024-01-24 18:43:10.837] [fileLogger] [info] 
+[2024-01-24 18:43:10.837] [fileLogger] [info] 【开始登录】
+[2024-01-24 18:43:11.084] [fileLogger] [info] 【绝峰用户信息同步结果】：{"code":"1","msg":"处理成功","data":"92015638","realNameInfo":{"thirdUserId":"","isAdult":1,"age":28},"token":"JFMIXTK_3048335_81450_33626772","thirdData":{"thirdName":"jfgame"}}
+[2024-01-24 18:43:11.084] [fileLogger] [info] 【绝峰用户信息同步成功】：
+[2024-01-24 18:43:11.087] [fileLogger] [info] 【收到登录参数】
+[2024-01-24 18:43:11.087] [fileLogger] [info] 
+[2024-01-24 18:43:11.087] [fileLogger] [info] 【开始登录】
+[2024-01-24 18:43:11.328] [fileLogger] [info] 【绝峰用户信息同步结果】：{"code":"1","msg":"处理成功","data":"92015638","realNameInfo":{"thirdUserId":"","isAdult":1,"age":28},"token":"JFMIXTK_3048335_81450_33128560","thirdData":{"thirdName":"jfgame"}}
+[2024-01-24 18:43:11.328] [fileLogger] [info] 【绝峰用户信息同步成功】：
+[2024-01-24 18:43:11.400] [fileLogger] [info] 【收到登录参数】
+[2024-01-24 18:43:11.400] [fileLogger] [info] 
+[2024-01-24 18:43:11.400] [fileLogger] [info] 【开始登录】
+[2024-01-24 18:43:11.677] [fileLogger] [info] 【绝峰用户信息同步结果】：{"code":"1","msg":"处理成功","data":"92015638","realNameInfo":{"thirdUserId":"","isAdult":1,"age":28},"token":"JFMIXTK_3048335_81450_78463074","thirdData":{"thirdName":"jfgame"}}
+[2024-01-24 18:43:11.678] [fileLogger] [info] 【绝峰用户信息同步成功】：
+[2024-01-24 18:43:12.088] [fileLogger] [info] 【收到登录参数】
+[2024-01-24 18:43:12.088] [fileLogger] [info] 
+[2024-01-24 18:43:12.088] [fileLogger] [info] 【开始登录】
+[2024-01-24 18:43:12.339] [fileLogger] [info] 【绝峰用户信息同步结果】：{"code":"1","msg":"处理成功","data":"92015638","realNameInfo":{"thirdUserId":"","isAdult":1,"age":28},"token":"JFMIXTK_3048335_81450_84316831","thirdData":{"thirdName":"jfgame"}}
+[2024-01-24 18:43:12.339] [fileLogger] [info] 【绝峰用户信息同步成功】：
+[2024-01-24 18:43:12.369] [fileLogger] [info] 【收到登录参数】
+[2024-01-24 18:43:12.369] [fileLogger] [info] 
+[2024-01-24 18:43:12.369] [fileLogger] [info] 【开始登录】
+[2024-01-24 18:43:12.627] [fileLogger] [info] 【绝峰用户信息同步结果】：{"code":"1","msg":"处理成功","data":"92015638","realNameInfo":{"thirdUserId":"","isAdult":1,"age":28},"token":"JFMIXTK_3048335_81450_72231273","thirdData":{"thirdName":"jfgame"}}
+[2024-01-24 18:43:12.627] [fileLogger] [info] 【绝峰用户信息同步成功】：
+[2024-01-24 18:43:12.650] [fileLogger] [info] 【收到登录参数】
+[2024-01-24 18:43:12.650] [fileLogger] [info] 
+[2024-01-24 18:43:12.650] [fileLogger] [info] 【开始登录】
+[2024-01-24 18:43:12.886] [fileLogger] [info] 【绝峰用户信息同步结果】：{"code":"1","msg":"处理成功","data":"92015638","realNameInfo":{"thirdUserId":"","isAdult":1,"age":28},"token":"JFMIXTK_3048335_81450_14800657","thirdData":{"thirdName":"jfgame"}}
+[2024-01-24 18:43:12.886] [fileLogger] [info] 【绝峰用户信息同步成功】：
+[2024-01-24 18:43:12.889] [fileLogger] [info] 【收到登录参数】
+[2024-01-24 18:43:12.889] [fileLogger] [info] 
+[2024-01-24 18:43:12.889] [fileLogger] [info] 【开始登录】
+[2024-01-24 18:43:13.129] [fileLogger] [info] 【绝峰用户信息同步结果】：{"code":"1","msg":"处理成功","data":"92015638","realNameInfo":{"thirdUserId":"","isAdult":1,"age":28},"token":"JFMIXTK_3048335_81450_03672880","thirdData":{"thirdName":"jfgame"}}
+[2024-01-24 18:43:13.129] [fileLogger] [info] 【绝峰用户信息同步成功】：
+[2024-01-24 18:43:13.134] [fileLogger] [info] 【收到登录参数】
+[2024-01-24 18:43:13.135] [fileLogger] [info] 
+[2024-01-24 18:43:13.135] [fileLogger] [info] 【开始登录】
+[2024-01-24 18:43:13.376] [fileLogger] [info] 【绝峰用户信息同步结果】：{"code":"1","msg":"处理成功","data":"92015638","realNameInfo":{"thirdUserId":"","isAdult":1,"age":28},"token":"JFMIXTK_3048335_81450_13748325","thirdData":{"thirdName":"jfgame"}}
+[2024-01-24 18:43:13.377] [fileLogger] [info] 【绝峰用户信息同步成功】：
+[2024-01-24 18:43:13.382] [fileLogger] [info] 【收到登录参数】
+[2024-01-24 18:43:13.382] [fileLogger] [info] 
+[2024-01-24 18:43:13.382] [fileLogger] [info] 【开始登录】
+[2024-01-24 18:43:13.628] [fileLogger] [info] 【绝峰用户信息同步结果】：{"code":"1","msg":"处理成功","data":"92015638","realNameInfo":{"thirdUserId":"","isAdult":1,"age":28},"token":"JFMIXTK_3048335_81450_42564162","thirdData":{"thirdName":"jfgame"}}
+[2024-01-24 18:43:13.629] [fileLogger] [info] 【绝峰用户信息同步成功】：
+[2024-01-24 18:44:32.096] [fileLogger] [info] 【开始初始化】
+[2024-01-24 18:44:33.300] [fileLogger] [info] 【收到登录参数】
+[2024-01-24 18:44:33.301] [fileLogger] [info] 
+[2024-01-24 18:44:33.301] [fileLogger] [info] 【开始登录】
+[2024-01-24 18:44:33.552] [fileLogger] [info] 【绝峰用户信息同步结果】：{"code":"1","msg":"处理成功","data":"92015638","realNameInfo":{"thirdUserId":"","isAdult":1,"age":28},"token":"JFMIXTK_3048335_81450_76513565","thirdData":{"thirdName":"jfgame"}}
+[2024-01-24 18:44:33.591] [fileLogger] [info] 【绝峰用户信息同步成功】：
+[2024-01-25 11:31:44.913] [fileLogger] [info] 日志初始化完成
+[2024-01-25 11:31:44.915] [fileLogger] [info] 【开始初始化】
+[2024-01-25 11:31:45.651] [fileLogger] [info] 【收到登录参数】
+[2024-01-25 11:31:45.651] [fileLogger] [info] 
+[2024-01-25 11:31:45.651] [fileLogger] [info] 【开始登录】
+[2024-01-25 11:31:45.915] [fileLogger] [info] 【绝峰用户信息同步结果】：{"code":"1","msg":"处理成功","data":"92015638","realNameInfo":{"thirdUserId":"","isAdult":1,"age":28},"token":"JFMIXTK_3048335_81450_14644155","thirdData":{"thirdName":"jfgame"}}
+[2024-01-25 11:31:46.152] [fileLogger] [info] 【绝峰用户信息同步成功】：
+[2024-01-25 11:33:22.089] [fileLogger] [info] 【开始初始化】
+[2024-01-25 11:33:22.963] [fileLogger] [info] 【收到登录参数】
+[2024-01-25 11:33:22.963] [fileLogger] [info] 
+[2024-01-25 11:33:22.963] [fileLogger] [info] 【开始登录】
+[2024-01-25 11:33:23.222] [fileLogger] [info] 【绝峰用户信息同步结果】：{"code":"1","msg":"处理成功","data":"92015638","realNameInfo":{"thirdUserId":"","isAdult":1,"age":28},"token":"JFMIXTK_3048335_81450_03070156","thirdData":{"thirdName":"jfgame"}}
+[2024-01-25 11:33:23.222] [fileLogger] [info] 【绝峰用户信息同步成功】：
+[2024-01-25 11:57:26.257] [fileLogger] [info] 日志初始化完成
+[2024-01-25 11:57:26.258] [fileLogger] [info] 【开始初始化】
+[2024-01-25 11:57:27.592] [fileLogger] [info] 【收到登录参数】
+[2024-01-25 11:57:27.592] [fileLogger] [info] 
+[2024-01-25 11:57:27.592] [fileLogger] [info] 【开始登录】
+[2024-01-25 11:57:27.850] [fileLogger] [info] 【绝峰用户信息同步结果】：{"code":"1","msg":"处理成功","data":"92015638","realNameInfo":{"thirdUserId":"","isAdult":1,"age":28},"token":"JFMIXTK_3048335_81450_18130271","thirdData":{"thirdName":"jfgame"}}
+[2024-01-25 11:57:27.905] [fileLogger] [info] 【绝峰用户信息同步成功】：
+[2024-01-25 11:57:58.328] [fileLogger] [info] 【收到登录参数】
+[2024-01-25 11:57:58.328] [fileLogger] [info] 
+[2024-01-25 11:57:58.328] [fileLogger] [info] 【开始登录】
+[2024-01-25 11:57:58.574] [fileLogger] [info] 【绝峰用户信息同步结果】：{"code":"1","msg":"处理成功","data":"92015638","realNameInfo":{"thirdUserId":"","isAdult":1,"age":28},"token":"JFMIXTK_3048335_81450_72005116","thirdData":{"thirdName":"jfgame"}}
+[2024-01-25 11:57:58.574] [fileLogger] [info] 【绝峰用户信息同步成功】：
+[2024-01-25 11:58:00.343] [fileLogger] [info] 【开始初始化】
+[2024-01-25 11:58:00.763] [fileLogger] [info] 【开始初始化】
+[2024-01-25 11:58:01.646] [fileLogger] [info] 【收到登录参数】
+[2024-01-25 11:58:01.646] [fileLogger] [info] 
+[2024-01-25 11:58:01.646] [fileLogger] [info] 【开始登录】
+[2024-01-25 11:58:01.894] [fileLogger] [info] 【绝峰用户信息同步结果】：{"code":"1","msg":"处理成功","data":"92015638","realNameInfo":{"thirdUserId":"","isAdult":1,"age":28},"token":"JFMIXTK_3048335_81450_37335140","thirdData":{"thirdName":"jfgame"}}
+[2024-01-25 11:58:01.895] [fileLogger] [info] 【绝峰用户信息同步成功】：
+[2024-01-25 11:58:02.080] [fileLogger] [info] 【收到登录参数】
+[2024-01-25 11:58:02.080] [fileLogger] [info] 
+[2024-01-25 11:58:02.080] [fileLogger] [info] 【开始登录】
+[2024-01-25 11:58:02.344] [fileLogger] [info] 【绝峰用户信息同步结果】：{"code":"1","msg":"处理成功","data":"92015638","realNameInfo":{"thirdUserId":"","isAdult":1,"age":28},"token":"JFMIXTK_3048335_81450_26334703","thirdData":{"thirdName":"jfgame"}}
+[2024-01-25 11:58:02.345] [fileLogger] [info] 【绝峰用户信息同步成功】：
+[2024-01-27 23:01:56.301] [fileLogger] [info] 日志初始化完成
+[2024-01-27 23:01:56.307] [fileLogger] [info] 【开始初始化】
+[2024-01-29 11:14:27.812] [fileLogger] [info] 日志初始化完成
+[2024-01-29 11:14:27.813] [fileLogger] [info] 【开始初始化】
+[2024-02-01 13:12:39.189] [fileLogger] [info] 日志初始化完成
+[2024-02-01 13:12:39.190] [fileLogger] [info] 【开始初始化】
+[2024-02-01 13:12:42.414] [fileLogger] [info] 【收到登录参数】
+[2024-02-01 13:12:42.414] [fileLogger] [info] 
+[2024-02-01 13:12:42.414] [fileLogger] [info] 【开始登录】
+[2024-02-01 13:12:42.684] [fileLogger] [info] 【绝峰用户信息同步结果】：{"code":"1","msg":"处理成功","data":"92015638","realNameInfo":{"thirdUserId":"","isAdult":1,"age":28},"token":"JFMIXTK_3048335_81450_31704846","thirdData":{"thirdName":"jfgame"}}
+[2024-02-01 13:12:42.792] [fileLogger] [info] 【绝峰用户信息同步成功】：
+[2024-02-01 13:13:06.379] [fileLogger] [info] 【收到登录参数】
+[2024-02-01 13:13:06.379] [fileLogger] [info] \u00E3\u0080\u008C\u00E3\u0080\u008D{"test":"\u00E6\u00B5\u008B\u00E8\u00AF\u009523"}
+[2024-02-01 13:13:06.379] [fileLogger] [info] 【开始登录】
+[2024-02-01 13:13:06.616] [fileLogger] [info] 【绝峰用户信息同步结果】：{"code":"1","msg":"处理成功","data":"92015638","realNameInfo":{"thirdUserId":"","isAdult":1,"age":28},"token":"JFMIXTK_3048335_81450_66036067","thirdData":{"thirdName":"jfgame"}}
+[2024-02-01 13:13:06.616] [fileLogger] [info] 【绝峰用户信息同步成功】：
+[2024-07-16 13:50:54.142] [fileLogger] [info] 日志初始化完成
+[2024-07-16 13:50:54.145] [fileLogger] [info] 【开始初始化】
+[2024-07-16 13:50:59.014] [fileLogger] [info] 【收到登录参数】
+[2024-07-16 13:50:59.015] [fileLogger] [info] 
+[2024-07-16 13:50:59.015] [fileLogger] [info] 【开始登录】
+[2024-07-16 13:50:59.308] [fileLogger] [info] 【绝峰用户信息同步结果】：{"code":"1","msg":"处理成功","message":null,"data":"92015638","realNameInfo":{"thirdUserId":"","isAdult":1,"age":28},"token":"JFMIXTK_3048335_81450_16486022","thirdData":{"thirdName":"jfgame"}}
+[2024-07-16 13:50:59.490] [fileLogger] [info] 【绝峰用户信息同步成功】：
+[2024-07-16 13:52:11.775] [fileLogger] [info] 【开始初始化】
+[2024-07-16 13:52:18.442] [fileLogger] [info] 【开始初始化】
+[2024-07-16 13:52:22.757] [fileLogger] [info] 【收到登录参数】
+[2024-07-16 13:52:22.757] [fileLogger] [info] 
+[2024-07-16 13:52:22.757] [fileLogger] [info] 【开始登录】
+[2024-07-16 13:52:23.008] [fileLogger] [info] 【绝峰用户信息同步结果】：{"code":"1","msg":"处理成功","message":null,"data":"92015638","realNameInfo":{"thirdUserId":"","isAdult":1,"age":28},"token":"JFMIXTK_3048335_81450_36537747","thirdData":{"thirdName":"jfgame"}}
+[2024-07-16 13:52:23.065] [fileLogger] [info] 【绝峰用户信息同步成功】：
+[2024-07-16 13:52:36.834] [fileLogger] [info] 【开始关闭】
+[2024-07-16 13:52:42.292] [fileLogger] [info] 【开始关闭】
+[2024-07-19 10:20:02.602] [fileLogger] [info] 日志初始化完成
+[2024-07-19 10:20:02.603] [fileLogger] [info] 【开始初始化】
+[2024-07-19 10:24:59.511] [fileLogger] [info] 【开始初始化】
+[2024-07-19 10:25:01.719] [fileLogger] [info] 【开始初始化】
+[2024-07-19 10:25:02.599] [fileLogger] [info] 【收到登录参数】
+[2024-07-19 10:25:02.599] [fileLogger] [info] 
+[2024-07-19 10:25:02.599] [fileLogger] [info] 【开始登录】
+[2024-07-19 10:25:02.856] [fileLogger] [info] 【绝峰用户信息同步结果】：{"code":"1","msg":"处理成功","message":null,"data":"92015638","realNameInfo":{"thirdUserId":"","isAdult":1,"age":28},"token":"JFMIXTK_3048335_81450_48545027","thirdData":{"thirdName":"jfgame"}}
+[2024-07-19 10:25:02.903] [fileLogger] [info] 【绝峰用户信息同步成功】：
+[2024-07-23 11:20:59.746] [fileLogger] [info] 日志初始化完成
+[2024-07-23 11:20:59.748] [fileLogger] [info] 【开始初始化】
+[2024-07-23 11:21:41.859] [fileLogger] [info] 【开始关闭】
+[2024-07-23 11:21:44.305] [fileLogger] [info] 【开始初始化】
+[2024-07-23 11:21:50.583] [fileLogger] [info] 【收到登录参数】
+[2024-07-23 11:21:50.583] [fileLogger] [info] 
+[2024-07-23 11:21:50.583] [fileLogger] [info] 【开始登录】
+[2024-07-23 11:21:50.887] [fileLogger] [info] 【绝峰用户信息同步结果】：{"code":"1","msg":"处理成功","message":null,"data":"92015638","realNameInfo":{"thirdUserId":"","isAdult":1,"age":28},"token":"JFMIXTK_3048335_81450_14433284","thirdData":{"thirdName":"jfgame"}}
+[2024-07-23 11:21:50.959] [fileLogger] [info] 【绝峰用户信息同步成功】：
+[2024-07-23 11:39:49.322] [fileLogger] [info] 日志初始化完成
+[2024-07-23 11:39:49.323] [fileLogger] [info] 【开始初始化】
