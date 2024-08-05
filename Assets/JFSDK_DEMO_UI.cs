@@ -36,10 +36,6 @@ public class JFSDK_DEMO_UI : MonoBehaviour
 
     private CallBackListener JFListener;
 
-    public static void showLog(string title, string message)
-    {
-        Debug.Log("title: " + title + ", message: " + message);
-    }
 
     //字符串转unicode 此方法可能不适用所有字符 请根据项目自身情况修改
     public static string stringToUnicode(string text)
@@ -128,7 +124,7 @@ public class JFSDK_DEMO_UI : MonoBehaviour
         }
         catch (Exception ex)
         {
-            Debug.LogError("点击登录异常"+ex);
+            Debug.LogError("点击登录异常："+ex);
         }
 
     }
@@ -172,7 +168,7 @@ public class JFSDK_DEMO_UI : MonoBehaviour
         }
         catch (Exception ex)
         {
-            Debug.Log("点击支付异常:"+ex);
+            Debug.Log("点击支付异常："+ex);
         }
     }
 
@@ -323,12 +319,10 @@ public class CallBackListener : JFSDKListener
     {
         try
         {
-            JFSDK_DEMO_UI.showLog("初始化失败-callback",desc);
-            Debug.LogError("初始化失败了");
+            Debug.LogError("初始化失败了："+ desc);
         }
         catch
         {
-            JFSDK_DEMO_UI.showLog("初始化异常", desc);
             Debug.LogError("初始化异常了");
         }
     }
@@ -350,12 +344,10 @@ public class CallBackListener : JFSDKListener
     {
         try
         {
-            JFSDK_DEMO_UI.showLog("登录失败", loginErrorMsg.getErrorMsg());
-            Debug.Log("登录失败了");
+            Debug.Log("登录失败了："+ loginErrorMsg.getErrorMsg());
         }
         catch
         {
-            JFSDK_DEMO_UI.showLog("处理登录失败异常", "");
             Debug.Log("处理登录失败异常了");
         }
     }

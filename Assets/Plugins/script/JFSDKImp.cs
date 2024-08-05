@@ -20,8 +20,12 @@ namespace jfsdk
 
         public void init(JFSDKListener listener)
         {
+#if UNITY_ANDROID && !UNITY_EDITOR
 			JFUnitySupportAndroid androidSupport = JFUnitySupportAndroid.getInstance();
 			androidSupport.init(listener);
+#else
+            Debug.LogWarning("请在安卓平台上运行！！！");
+#endif
         }
 
 
@@ -200,8 +204,9 @@ namespace jfsdk
     }
 
 
-    public class JFUnitySupportAndroid  {
-
+    public class JFUnitySupportAndroid
+    {
+#if UNITY_ANDROID && !UNITY_EDITOR
         AndroidJavaObject ao;
         AndroidJavaObject unityActivity;
         private static JFUnitySupportAndroid instance;
@@ -406,6 +411,7 @@ namespace jfsdk
             Debug.Log("开始调用SDK onRequestPermissionsResult 方法");
             ao.Call("onRequestPermissionsResult", activity, requestCode, permissions, grantResults);
         }
+#endif
     }
-}
 
+}
