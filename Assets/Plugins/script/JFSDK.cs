@@ -168,16 +168,6 @@ namespace jfsdk
             this.token = token;
         }
 
-
-        public String toString()
-        {
-            return "LogincallBack{" +
-                    ", userId='" + jfUserId + '\'' +
-                    ", userName='" + userName + '\'' +
-                    ", token='" + token + '\'' +
-                    '}';
-        }
-
     }
 
     public class LoginErrorMsg

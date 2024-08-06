@@ -34,7 +34,7 @@ public class JFSDK_DEMO_UI : MonoBehaviour
     private ConcurrentQueue<string> logQueue = new ConcurrentQueue<string>();
     private object lockObject = new object();
 
-    private CallBackListener JFListener;
+    private static CallBackListener JFListener;
 
 
     //字符串转unicode 此方法可能不适用所有字符 请根据项目自身情况修改
