@@ -32,3 +32,34 @@ Unity Editor Version：2022.3.15f1c1
 1、将unity项目打包成apk文件
 2、将apk文件安装到模拟器或者安卓手机启动后进行调试
 
+## 接入项目
+
+### 一、 接入说明
+
+#### 1.1：谁来阅读此文档
+
+接入厂商的产品，技术人员，平台技术人员。
+
+#### 1.2：注意事项
+
+接口参数大小写敏感
+
+request和response的编码格式为UTF-8。
+
+#### 1.3：名词定义
+
+名词	        说明
+CP	        游戏合作商
+APP	        接入平台的游戏
+JF_APPID	接入时由平台分配的游戏ID。
+JF_APPKEY	接入时由平台分配的游戏/应用密钥。
+
+### 二、 拷贝部分
+
+#### 2.1：文件的拷贝
+
+将demo工程Assest目录下面的Plugins文件夹整体拷贝到目标项目的Assest目录下面
+
+#### 2.2：AndroidManifest.xml文件的配制
+
+需要修改 aar包中的 AndroidManifest.xml 文件中的 JF_APPID和JF_APPKEY为绝锋游戏平台所提供的JF_APPID和JF_APPKEY
