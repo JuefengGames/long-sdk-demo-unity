@@ -91,16 +91,17 @@ public class CallBackListener : JFSDKListener
 
 ##### 3.1.3：接口及参数说明
 
-方法	                                                说明  
-onInitSuccessCallback(String desc,boolean isAutoLogin)	初始化成功；参数说明：desc(字符串“初始化成功”)IsAutoLogin(是否可调取自动登录)  
-onInitFaildCallback(String desc)	                初始化失败；参数说明：desc(字符串“初始化失败原因”)  
-onLoginSuccessCallback(LogincallBack logincallBack)	登录成功参数说明：logincallBack(登录成功后返回的用户信息对像)  
-onLoginFailedCallback(LoginErrorMsgerrorMsg)	        登录失败参数说明：errorMsg (登录失败后返回的错误码，及失败原因)  
-onPaySuccess (PaySuccessInfopaySuccessInfo)	        支付成功参数说明：paySuccessInfo(支付成功后返回的订单信息，含有订单号，此处还需要去跟游戏服务器确认支付信息，才可确定支付成功)  
-onPayFaild(PayFaildInfopayFaildInfo)	                支付失败参数说明：payFaildInfo(支付失败返回的信息)  
-onExitCallback(String desc)	                        退出成功参数说明：desc(字符串“成功退出”)  
-onCancleExitCallback(String desc)	                取消退出，选择继续游戏参数说明：desc(字符串“取消退出”)  
-onCreatedOrderCallback(CreateOrderInfocreatOrderInfo)	SDK服务器已经成功创建此订单creatOrderInfo订单信息  
-onLogoutLoginCallback()	                                注销账号登录（需在此回调中退出游戏，返回登录页面）  
-onSwitchAccountSuccessCallback	                        此回调接口是在当SDK内部有切换帐号的功能，且切换成功时会调用，游 戏方需要在这个回调接口中注销原来的角色数据，然后根据新的 (参数 login中可以获取到)来重新加载角色数据；  
-onGameSwitchAccountCallback	                        此接口是在游戏内有账号切换功能点击 调用 JFSDK.getInstance().switchAccount(MainActivity.this);后回调 游戏方账号切换逻辑需要在此回调中执行  
+| 方法  | 说明 |
+|-------------|-------------|
+|onInitSuccessCallback(String desc,boolean isAutoLogin)|初始化成功；参数说明：desc(字符串“初始化成功”)IsAutoLogin(是否可调取自动登录)|
+|onInitFaildCallback(String desc)|初始化失败；参数说明：desc(字符串“初始化失败原因”)|
+|onLoginSuccessCallback(LogincallBack logincallBack)|登录成功参数说明：logincallBack(登录成功后返回的用户信息对像)|
+|onLoginFailedCallback(LoginErrorMsgerrorMsg)|登录失败参数说明：errorMsg (登录失败后返回的错误码，及失败原因)|
+|onPaySuccess (PaySuccessInfopaySuccessInfo)|支付成功参数说明：paySuccessInfo(支付成功后返回的订单信息，含有订单号，此处还需要去跟游戏服务器确认支付信息，才可确定支付成功)|
+|onPayFaild(PayFaildInfopayFaildInfo)|支付失败参数说明：payFaildInfo(支付失败返回的信息)|
+|onExitCallback(String desc)|退出成功参数说明：desc(字符串“成功退出”)|
+|onCancleExitCallback(String desc)|取消退出，选择继续游戏参数说明：desc(字符串“取消退出”)|
+|onCreatedOrderCallback(CreateOrderInfocreatOrderInfo)|SDK服务器已经成功创建此订单creatOrderInfo订单信息|
+|onLogoutLoginCallback()|注销账号登录（需在此回调中退出游戏，返回登录页面）|
+|onSwitchAccountSuccessCallback|此回调接口是在当SDK内部有切换帐号的功能，且切换成功时会调用，游 戏方需要在这个回调接口中注销原来的角色数据，然后根据新的 (参数 login中可以获取到)来重新加载角色数据；|
+|onGameSwitchAccountCallback|此接口是在游戏内有账号切换功能点击 调用 JFSDK.getInstance().switchAccount(MainActivity.this);后回调 游戏方账号切换逻辑需要在此回调中执行|
