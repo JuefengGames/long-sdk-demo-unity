@@ -67,7 +67,7 @@ JF_APPKEY	接入时由平台分配的游戏/应用密钥。
 
 需要修改 aar包中的 AndroidManifest.xml 文件中的 JF_APPID和JF_APPKEY为绝锋游戏平台所提供的JF_APPID和JF_APPKEY
 
-###三、 sdk业务接口代码说明
+### 三、 sdk业务接口代码说明
 
 #### 3.1：sdk初始化，登录，注册，支付，退出等事件监听接口的实现及参数说明
 
