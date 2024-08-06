@@ -418,3 +418,9 @@ JFSDK.getInstance().switchAccount();
 #### 4 混淆
 
 JFSDK包是以jar提供给用户的，已经半混淆状态，您在混淆自己APK包的时候请不要将jar包一起混淆，因为里面有自定义UI控件，若被混淆后会因为无法找到相关类而抛异常
+
+## 联系我们
+
+If you have any questions about this program, please contact us!  
+
+Email: ouyangjie@juefeng.com
