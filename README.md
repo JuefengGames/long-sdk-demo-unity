@@ -160,6 +160,7 @@ JFSDK.getInstance().doLogin();
 |pi|String|(防沉迷预留字段)|
 |age|int|年龄|
 
+
 登录失败回调方法：onLoginFaild
 该方法在产生业务逻辑错误时调用。
 回调参数说明：
@@ -242,3 +243,178 @@ private String code; //错误码
 private String msg;	//失败说明	｝
 
 ```
+
+#### 3.5：平台浮点，用户中心（必须调用）
+
+##### 3.5.1：功能说明
+
+登录完成后，可以通过悬浮按钮进入个人中心  
+
+ 查看平台帐号信息  
+
+ 设置帐号密码保护  
+ 
+ 帐号绑定手机  
+
+ 修改帐号密码  
+
+ 管理支付密码，查看充值和消费记录  
+
+##### 3.5.2：API调用
+
+1、浮点的显示  
+
+代码：
+```
+JFSDK.getInstance().showFloatView();
+```
+
+2、浮点的隐藏
+代码：
+```
+JFSDK.getInstance().removeFloatView(){}//隐藏悬浮窗口
+```
+##### 3.5.3：API调用位置
+
+1：浮点的显示
+
+登陆成功回调内调用
+
+
+#### 3.6: 游戏数据同步（必须调用）
+
+##### 3.6.1:说明
+
+首次登入游戏或角色信息发生变化时sdk需要同步角色信息，角色信息分为四种类型
+
+|类型|Type值|调用方法|
+|-------------|-------------|-------------|
+|角色创建|1|JFSDK.getInstance().syncInfo(roleInfo);|
+|角色登陆|2|JFSDK.getInstance().syncInfo(roleInfo);|
+|角色升级|3|JFSDK.getInstance().syncInfo(roleInfo);|
+|角色退出|4|JFSDK.getInstance().syncInfo(roleInfo);|
+
+
+代码如下3.6.2所示，不同类型传入不同type值
+
+##### 3.6.2：调用示例(角色创建)
+
+|字段|说明|
+|-------------|-------------|
+|serverName|服务器名称(必传)|
+|serverId|服务器ID(必传)|
+|roleName|角色名称(必传)|
+|roleId|角色ID(必传)|
+|partyId|公会id（尽量传）|
+|partyName|公会名称（尽量传）|
+|gameRoleLevel|角色等级(必传)|
+|attach|额外字段|
+|type|1:创建，2：登录，3：升级 4：退出(必传)|
+|experience|当前经验值（尽量传）|
+|roleCreateTime|角色创建时间 long（type为1传入）|
+|vipLevel|Vip等级 int（尽量传）|
+|gameRolePower|战力值 int（尽量传）|
+
+调用代码：
+```
+JfRoleInfo roleInfo = new JfRoleInfo();
+
+roleInfo.setGameRoleLevel("3");
+
+roleInfo.setRoleId("角色id");
+
+roleInfo.setGameRolePower(55555);
+
+roleInfo.setServerId("服务器ID");
+
+roleInfo.setServerName("服务器名称");
+
+roleInfo.setRoleName("柳鸿振");
+
+roleInfo.setExperience("135355446");
+
+roleInfo.setPartyId("公会ID");
+
+roleInfo.setPartyName("公会名称");
+
+roleInfo.setRoleCreateTime(System.currentTimeMillis());
+
+roleInfo.setVipLevel(5);
+
+roleInfo.setType("1");
+
+JFSDK.getInstance().syncInfo(roleInfo);
+```
+
+#### 3.8：游戏退出
+
+##### 3.8.1：API的使用
+
+调用JFSDK.getInstance().exitLogin();
+
+##### 3.8.2：回调说明
+
+点击返回键调用 JFSDK.getInstance().exitLogin();
+
+选择退出是 会回调 （3.1）SdkEventListener 内的 onExitCallback()方法 在此方法里面执行游戏界面的关闭
+
+
+
+##### 3.8.3：游戏内退出
+
+游戏内出现顶号或者主动注销账号的时候调用
+
+JFSDK.getInstance().logoutLogin();
+
+#### 3.9：注销登录（必须实现）
+
+点击个人中心的退出当前账户按钮，会回调**（3.1）中的onLogoutLoginCallback**接口 此接口内需实现返回游戏登录界面的代码 游戏方执行
+
+#### 3.10:SDK生命周期接口（必须实现）
+
+```
+public void onCreate(AndroidJavaObject act);（必须先于 SDK 的 init 前调用）
+
+public void onResume(AndroidJavaObject act);
+
+public void onPause(AndroidJavaObject act);
+
+public void onStart(AndroidJavaObject act);
+
+public void onRestart(AndroidJavaObject act);
+
+public void onStop(AndroidJavaObject act);
+
+public void onDestroy(AndroidJavaObject act);
+
+public void onNewIntent(AndroidJavaObject act, AndroidJavaObject intent);
+
+public void onActivityResult(AndroidJavaObject act,int requestCode, int resultCode, AndroidJavaObject intent);
+
+public void onWindowFocusChanged(boolean hasFocus)
+
+public void onBackPressed()
+
+public void onRequestPermissionsResult(Activity AndroidJavaObject, int requestCode, String[] permissions, int[] grantResults)
+```
+
+#### 3.11:Application的添加（必接）
+若 App本身无自定义Application， 请在AndroidManifest.xml 中接入  
+
+
+若 App本身有自定义Application,请继承或者调用 com.juefeng.sdk.juefengsdk. JfApplication  
+
+本sdk自带的的初始化方法中已经调用，如果碰到问题可以去掉自己实现
+
+
+#### 3.12：游戏内账号切换
+
+游戏内有账号切换按钮时点击按钮需要调用一下接口
+
+JFSDK.getInstance().switchAccount();
+
+接口会回调Listener 中的onGameSwitchAccountCallback接口参考3.1.3在接口内做相关处理
+
+#### 4 混淆
+
+JFSDK包是以jar提供给用户的，已经半混淆状态，您在混淆自己APK包的时候请不要将jar包一起混淆，因为里面有自定义UI控件，若被混淆后会因为无法找到相关类而抛异常
