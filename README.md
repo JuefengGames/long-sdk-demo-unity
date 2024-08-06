@@ -105,3 +105,140 @@ public class CallBackListener : JFSDKListener
 |onLogoutLoginCallback()|注销账号登录（需在此回调中退出游戏，返回登录页面）|
 |onSwitchAccountSuccessCallback|此回调接口是在当SDK内部有切换帐号的功能，且切换成功时会调用，游 戏方需要在这个回调接口中注销原来的角色数据，然后根据新的 (参数 login中可以获取到)来重新加载角色数据；|
 |onGameSwitchAccountCallback|此接口是在游戏内有账号切换功能点击 调用 JFSDK.getInstance().switchAccount(MainActivity.this);后回调 游戏方账号切换逻辑需要在此回调中执行|
+
+#### 3.2：sdk的初始化
+
+##### 3.2.1：代码部分
+
+主类中生成对象
+```
+using jfsdk;
+private static CallBackListener JFListener;
+```
+
+初始化方法中调用
+```
+JFListener = new CallBackListener();
+JFSDK.getInstance().init(JFListener);
+```
+
+##### 3.2.2：参数说明
+
+1、初始化sdk资源，注册sdk事件监听器。  
+
+2、CallBackListener 为3.1.2中生成的类
+
+##### 3.2.3：回调说明
+
+初始化的成功失败会回调 3.1中的onInitSuccessCallback 和 onInitFaildCallback cp可根据回调结果做出相应处理
+
+#### 3.3：登录
+
+##### 3.3.1：登录拉起说明
+
+方法需要在UI线程中调用，
+
+代码调用：
+```
+JFSDK.getInstance().doLogin();
+```
+
+##### 3.3.2：登录回调说明
+
+回调说明:登录和注册的失败会回调到3.1中的onLoginSuccessCallback和onLoginFailedCallback cp可根据回调结果做出相应处理
+
+##### 3.3.3：返回参数说明：
+
+登录或注册成功回调方法：onLoginSuccessCallback
+回调参数说明：
+|参数名|类型|参数说明|
+|-------------|-------------|-------------|
+|userId|string|登录成功后，用户的]()userId（唯一）|
+|token|string|用户此次登录平台分配的唯一token（唯一）|
+|userName|string|用户名|
+|isAuthenticated|boolean|是否已经实名认证,true(是),false(否)|
+|pi|String|(防沉迷预留字段)|
+|age|int|年龄|
+
+登录失败回调方法：onLoginFaild
+该方法在产生业务逻辑错误时调用。
+回调参数说明：
+|参数名|类型|参数说明|
+|-------------|-------------|-------------|
+|code|string|登录失败错误码|
+|errorMsg|string|登录失败的消息提示|
+
+#### 3.4：支付
+
+##### 3.4.1 支付接口
+
+```
+JFSDK.getInstance().showPay(jfOrderInfo);
+```
+
+参数说明
+|字段|说明|
+|-------------|-------------|
+|level	角色等级|
+|goodsId|商品Id (商品编号) 没有传 “1”|
+|goodsName|商品名称(String)不可为null不可为空串|
+|goodsDes|商品描述(String)不可为null不可为空串|
+|price|钱数 (int数字类型字符串)不可为null不可为空串(单位元)|
+|serverId|区服ID 不可为null不可为空串|
+|serverName|区服名称（必传）不可为null不可为空串|
+|roleId|角色游戏内唯一标示（必传）(不可为null不可为空串)|
+|roleName|角色名称（必传）|
+|vip|用户Vip等级 没有传 “1”|
+|remark|透传字段（无特殊情况 请传入订单号（cpOrderId））|
+|cpOrderId|Cp生成的订单号（必传）|
+
+##### 3.4.2：支付的回调
+
+支付涉及三个回调，创建订单成功，支付成功，支付失败。分别会回调到3.1中的
+
+onCreatedOrderCallback，onPaySuccess，onPayFaild
+
+##### 3.4.3：回调返回对象字段解释
+
+onPaySuccess，onCreatedOrderCallback，onPayFaild
+```
+PaySuccessInfo｛
+public String orderId;  //服务端生成的唯一订单号
+
+public String gameRole;// 游戏端传入的角色Id
+
+public String gameArea;  //游戏端传入的区服信息
+
+public String productName;  //游戏端传入的商品名称
+
+public String productDesc;  ///游戏端传入的商品描述
+
+public String remark;  //游戏端传入的自定义参数
+
+public String cpOrderId;  //cp传入的订单号
+
+｝
+
+CreateOrderInfo｛
+
+public String orderId;  //sdk服务端生成的唯一订单号
+
+public String gameRole;//游戏端传入的角色Id
+
+public String gameArea;  //游戏端传入的区服信息
+
+public String productName;  //游戏端传入的商品名称
+
+public String productDesc;  //游戏端传入的商品描述
+
+public String cpOrderId;  //cp传入的订单号
+
+public String remark;  //游戏端传入的自定义参数｝
+
+PayFaildInfo｛
+
+private String code; //错误码
+
+private String msg;	//失败说明	｝
+
+```
