@@ -28,47 +28,28 @@ namespace jfsdk
 #endif
         }
 
-
-
-
-        public void exit()
+        public void exitLogin()
         {
 #if UNITY_ANDROID && !UNITY_EDITOR
 			JFUnitySupportAndroid androidSupport = JFUnitySupportAndroid.getInstance();
-			androidSupport.exit();
+			androidSupport.exitLogin();
 #endif
         }
-        public void exitGame()
-        {
-#if UNITY_ANDROID && !UNITY_EDITOR
-			JFUnitySupportAndroid androidSupport = JFUnitySupportAndroid.getInstance();
-			androidSupport.exitGame();
-#endif
-        }
-        public void login()
+        public void doLogin()
         {
 #if UNITY_IOS && !UNITY_EDITOR
 			JFSDK_nativeLogin();
 #elif UNITY_ANDROID && !UNITY_EDITOR
 			JFUnitySupportAndroid androidSupport = JFUnitySupportAndroid.getInstance();
-			androidSupport.login();
-#endif
-        }
-        public void logout()
-        {
-#if UNITY_IOS && !UNITY_EDITOR
-			JFSDK_nativeLogout();
-#elif UNITY_ANDROID && !UNITY_EDITOR
-			JFUnitySupportAndroid androidSupport = JFUnitySupportAndroid.getInstance();
-			androidSupport.logout();
+			androidSupport.doLogin();
 #endif
         }
 
-        public void pay(JfOrderInfo orderInfo)
+        public void showPay(JfOrderInfo orderInfo)
         {
 #if UNITY_ANDROID && !UNITY_EDITOR
 			JFUnitySupportAndroid androidSupport = JFUnitySupportAndroid.getInstance();
-			androidSupport.pay(orderInfo);
+			androidSupport.showPay(orderInfo);
 #endif
         }
         public void showFloatView()
@@ -249,25 +230,15 @@ namespace jfsdk
             }
         }
 
-        public void exit()
-        {
-            ao.Call("requestExit");
-        }
-
-        public void login()
+        public void doLogin()
         {
             Debug.Log("开始调用登录");
             ao.Call("doLogin", unityActivity);
         }
 
-        public void logout()
-        {
-            Debug.Log("开始登出");
-            ao.Call("exitLogin", unityActivity);
-        }
 
 
-        public void pay(JfOrderInfo orderInfo)
+        public void showPay(JfOrderInfo orderInfo)
         {
             if (orderInfo == null)
             {
@@ -301,7 +272,7 @@ namespace jfsdk
             ao.Call("removeFloatView");
         }
 
-        public void exitGame()
+        public void exitLogin()
         {
             Debug.Log("开始调用SDK退出游戏");
             ao.Call("exitLogin", unityActivity);

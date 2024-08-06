@@ -20,16 +20,15 @@ Assest
 
 ## 开发环境
 
-```
+
 Unity Hub Version：3.3.1-c3
 Unity Editor Version：2022.3.15f1c1
 
-```
+
 
 ## 项目调试
 
-```
+
 1、将unity项目打包成apk文件
 2、将apk文件安装到模拟器或者安卓手机启动后进行调试
 
-```

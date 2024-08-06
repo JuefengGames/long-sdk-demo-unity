@@ -25,31 +25,19 @@ namespace jfsdk
             JFSDKImp.getInstance().init(listener);
         }
 
-
-
-
-        public void exit()
+        public void doLogin()
         {
-            JFSDKImp.getInstance().exit();
+            JFSDKImp.getInstance().doLogin();
         }
 
-        public void login()
+        public void showPay(JfOrderInfo orderInfo)
         {
-            JFSDKImp.getInstance().login();
-        }
-        public void logout()
-        {
-            JFSDKImp.getInstance().logout();
+            JFSDKImp.getInstance().showPay(orderInfo);
         }
 
-        public void pay(JfOrderInfo orderInfo)
+        public void exitLogin()
         {
-            JFSDKImp.getInstance().pay(orderInfo);
-        }
-
-        public void exitGame()
-        {
-            JFSDKImp.getInstance().exitGame();
+            JFSDKImp.getInstance().exitLogin();
         }
 
         public void showFloatView()

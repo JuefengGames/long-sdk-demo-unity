@@ -120,7 +120,7 @@ public class JFSDK_DEMO_UI : MonoBehaviour
                 Debug.LogError("«Îœ»≥ı ºªØ£°£°£°");
                 return;
             }
-            JFSDK.getInstance().login();
+            JFSDK.getInstance().doLogin();
         }
         catch (Exception ex)
         {
@@ -164,7 +164,7 @@ public class JFSDK_DEMO_UI : MonoBehaviour
             jfOrderInfo.setGoodsDes(result[9]);
             jfOrderInfo.setGoodsId(result[10]);
             jfOrderInfo.setRemark(result[11]);
-            JFSDK.getInstance().pay(jfOrderInfo);
+            JFSDK.getInstance().showPay(jfOrderInfo);
         }
         catch (Exception ex)
         {
@@ -270,7 +270,7 @@ public class JFSDK_DEMO_UI : MonoBehaviour
     {
         try
         {
-            JFSDK.getInstance().exitGame();
+            JFSDK.getInstance().exitLogin();
         }
         catch
         {
