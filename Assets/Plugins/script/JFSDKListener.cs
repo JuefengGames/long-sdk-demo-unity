@@ -1,7 +1,5 @@
 using UnityEngine;
-using System.Collections;
 using System;
-using static UnityEngine.Application;
 
 namespace jfsdk
 {

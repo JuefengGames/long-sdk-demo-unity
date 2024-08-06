@@ -1,20 +1,9 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using System;
 using UnityEngine.UI;
 using System.Text;
-using System.Text.RegularExpressions;
-using System.Runtime.InteropServices;
-using AOT;
-using UnityEngine.XR;
-using static Assets.JsonHelper;
-using System.Threading;
-using Assets;
-using Unity.VisualScripting;
 using jfsdk;
 using System.Collections.Concurrent;
-using UnityEngine.Windows;
 
 public class JFSDK_DEMO_UI : MonoBehaviour
 {
