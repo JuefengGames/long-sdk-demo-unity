@@ -1,6 +1,6 @@
 ## LANGUAGE
 
-[reading for english | 阅读英文文档](https://github.com/JuefengGames/long-sdk-demo-unity/blob/main/README.md)  
+[reading in english | 阅读英文文档](https://github.com/JuefengGames/long-sdk-demo-unity/blob/main/README.md)  
 
 ## demo 简介
 
