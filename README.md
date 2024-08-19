@@ -1,341 +1,335 @@
-## demo 简介
+## LANGUAGE
 
-本工程由unity开发平台生成，主要是为了帮助unity开发者在unity代码中接入 LongSDK 安卓端SDK。
+[reading for chinese 阅读中文文档](https://github.com/JuefengGames/long-sdk-demo-unity/blob/main/README_ZH_CN.md)
+[reading for english 阅读英文文档](https://github.com/JuefengGames/long-sdk-demo-unity/blob/main/README.md)
 
-## 项目结构
+## Demo Introduction
+
+This project, generated using the Unity development platform, primarily aims to assist Unity developers in integrating LongSDK (Android) encapsulated with Unity SDK into their Unity code.
+
+## Project Structure
 
 ```
-Assest
-├── Plugins			           // LongSDK 文件存放和SDK接入代码目录通常不需要修改	  编写自己的工程时候请把本目录直接拷贝过去
+Assets
+├── Plugins                                   // LongSDK files and SDK integration code directory, usually do not need modification. Please copy this directory to your own project during development.
 |          ├──Android
-|          |         ├──haiwai-5.4.3.aar   //LongSDK文件存放目录  如果要接入自己的工程需要修改包中的 AndroidManifest.xml相关配置
+|          |         ├──haiwai-5.4.3.aar     // LongSDK file storage directory. If integrating into your own project, modify the AndroidManifest.xml related configurations within the package.
 |          |          
-|          ├──script                       //unity 对接 SDK相关代码 本目录下代码一般不需要修改
+|          ├──script                         // Unity encapsulated LongSDK (Android) related code, usually do not need modification.
 |          |         ├──JFSDK.cs
 |          |         ├──JFSDKImp.cs
 |          |         ├──JFSDKListener.cs
-├── JFSDK_DEMO_UI.cs			// demo 工程调用sdk接口代码   如需在自己工程中调用LongSDK请参考此代码
+├── JFSDK_DEMO_UI.cs                          // SDK interface invocation code in the demo project. Refer to this code when invoking LongSDK in your own project.
 └── ...
 ```
 
-## 开发环境
-
+## Development Environment
 
 Unity Hub Version：3.3.1-c3  
 Unity Editor Version：2022.3.15f1c1
 
+## Project Debugging
 
+1. Package the Unity project into an APK file.
+2. Install the APK file on an emulator or an Android device and start the debugging process.
 
-## 项目调试
+## Integration Instructions
 
+### 1. Integration Guide
 
-1、将unity项目打包成apk文件  
-2、将apk文件安装到模拟器或者安卓手机启动后进行调试
+#### 1.1: Intended Audience
 
+Technical personnel of integration partners, product technical staff, and platform technical staff.
 
+#### 1.2: Points to Note
 
-## 接入项目
+- Interface parameters are case-sensitive.
+- The encoding format for request and response is UTF-8.
 
-### 一、 接入说明
+#### 1.3: Terminology Definitions
 
-#### 1.1：谁来阅读此文档
+| Term              | Description |
+|-------------------|-------------|
+| CP                | Game Partner |
+| APP               | Game integrated into the platform |
+| JF_APPID         | Game ID assigned by the platform during integration. |
+| JF_APPKEY        | Game/application key assigned by the platform during integration. |
 
-接入厂商的产品，技术人员，平台技术人员。
+### 2. Copy Configuration File
 
-#### 1.2：注意事项
+#### 2.1: Copy SDK Files
 
-接口参数大小写敏感
+1. Copy the entire Plugins folder from the demo project's Assets directory to the target project's Assets directory.
+2. Add JFSDK.cs, JFSDKImp.cs, and JFSDKListener.cs to your project.
 
-request和response的编码格式为UTF-8。
+#### 2.2: Configuration of AndroidManifest.xml
 
-#### 1.3：名词定义
+Modify the AndroidManifest.xml within the aar package to set JF_APPID and JF_APPKEY to the values provided by the JF platform.
 
-名词	        说明  
-CP	        游戏合作商  
-APP	        接入平台的游戏  
-JF_APPID	接入时由平台分配的游戏ID。  
-JF_APPKEY	接入时由平台分配的游戏/应用密钥。
+### 3. SDK Business Interface Code Explanation
 
-### 二、 拷贝配置文件
+#### 3.1: Implementation and Parameter Explanation of SDK Initialization, Login, Registration, Payment, and Exit Event Listener Interfaces
 
-#### 2.1：SDK文件的拷贝
+##### 3.1.1: API Description
 
-1、将demo工程Assest目录下面的Plugins文件夹整体拷贝到目标项目的Assest目录下面  
-2、JFSDK.cs JFSDKImp.cs JFSDKListener.cs添加到工程中
+Most of the SDK API calls use the event notification method to call back to the game. Create a Listener object in the code (generate a class that inherits the JFSDKListener class and implements callback methods, refer to the demo). This monitors each event result of the SDK. Below is the code section, including explanations of each callback interface and parameter descriptions.
 
-#### 2.2：AndroidManifest.xml文件的配制
+##### 3.1.2: Code Section
 
-需要修改 aar包中的 AndroidManifest.xml 文件中的 JF_APPID和JF_APPKEY为绝锋游戏平台所提供的JF_APPID和JF_APPKEY
-
-### 三、 sdk业务接口代码说明
-
-#### 3.1：sdk初始化，登录，注册，支付，退出等事件监听接口的实现及参数说明
-
-##### 3.1.1：api说明
-
-SDK的大部分API调用，使用了事件通知的方式回调给游戏,游戏通过创建一个Listener对象（需要在代码中生成一个类继承JFSDKListener类并实现回调方法，请参考demo），实现对SDK的每个事件结果的监听以下是代码部分（包含对每个回调接口的解释，及参数说明）。
-
-##### 3.1.2：代码部分：
-
-生成一个类并继承JFSDKListener类
+Generate a class and inherit the JFSDKListener class:
 ```
 public class CallBackListener : JFSDKListener
 {
     public override void onCancleExitCallback(string desc)
     {
-        Debug.Log("取消退出游戏");
+        Debug.Log("Cancel exit game");
     }
     ...
 }
 ```
 
-##### 3.1.3：接口及参数说明
+##### 3.1.3: Interface and Parameter Description
 
-| 方法  | 说明 |
+| Method | Description |
 |-------------|-------------|
-|onInitSuccessCallback(String desc,boolean isAutoLogin)|初始化成功；参数说明：desc(字符串“初始化成功”)IsAutoLogin(是否可调取自动登录)|
-|onInitFaildCallback(String desc)|初始化失败；参数说明：desc(字符串“初始化失败原因”)|
-|onLoginSuccessCallback(LogincallBack logincallBack)|登录成功参数说明：logincallBack(登录成功后返回的用户信息对像)|
-|onLoginFailedCallback(LoginErrorMsgerrorMsg)|登录失败参数说明：errorMsg (登录失败后返回的错误码，及失败原因)|
-|onPaySuccess (PaySuccessInfopaySuccessInfo)|支付成功参数说明：paySuccessInfo(支付成功后返回的订单信息，含有订单号，此处还需要去跟游戏服务器确认支付信息，才可确定支付成功)|
-|onPayFaild(PayFaildInfopayFaildInfo)|支付失败参数说明：payFaildInfo(支付失败返回的信息)|
-|onExitCallback(String desc)|退出成功参数说明：desc(字符串“成功退出”)|
-|onCancleExitCallback(String desc)|取消退出，选择继续游戏参数说明：desc(字符串“取消退出”)|
-|onCreatedOrderCallback(CreateOrderInfocreatOrderInfo)|SDK服务器已经成功创建此订单creatOrderInfo订单信息|
-|onLogoutLoginCallback()|注销账号登录（需在此回调中退出游戏，返回登录页面）|
-|onSwitchAccountSuccessCallback|此回调接口是在当SDK内部有切换帐号的功能，且切换成功时会调用，游 戏方需要在这个回调接口中注销原来的角色数据，然后根据新的 (参数 login中可以获取到)来重新加载角色数据；|
-|onGameSwitchAccountCallback|此接口是在游戏内有账号切换功能点击 调用 JFSDK.getInstance().switchAccount(MainActivity.this);后回调 游戏方账号切换逻辑需要在此回调中执行|
+|onInitSuccessCallback(String desc, boolean isAutoLogin)|Initialization successful; parameter description: desc (string "Initialization successful"), isAutoLogin (boolean indicating if auto-login can be called)|
+|onInitFaildCallback(String desc)|Initialization failed; parameter description: desc (string "Reason for initialization failure")|
+|onLoginSuccessCallback(LogincallBack logincallBack)|Login successful; parameter description: logincallBack (user information object returned after successful login)|
+|onLoginFailedCallback(LoginErrorMsgerrorMsg)|Login failed; parameter description: errorMsg (error code and reason for failure returned after login failure)|
+|onPaySuccess (PaySuccessInfopaySuccessInfo)|Payment successful; parameter description: paySuccessInfo (order information returned after successful payment, including order number, further confirmation with the game server is required to confirm payment success)|
+|onPayFaild(PayFaildInfopayFaildInfo)|Payment failed; parameter description: payFaildInfo (information returned after payment failure)|
+|onExitCallback(String desc)|Exit successful; parameter description: desc (string "Successfully exited")|
+|onCancleExitCallback(String desc)|Cancel exit, choose to continue the game; parameter description: desc (string "Cancelled exit")|
+|onCreatedOrderCallback(CreateOrderInfocreatOrderInfo)|SDK server has successfully created this order; creatOrderInfo contains order information|
+|onLogoutLoginCallback()|Logout and login (need to exit the game and return to the login page in this callback)|
+|onSwitchAccountSuccessCallback|This callback is invoked when there is a switch account function within the SDK and the switch is successful. The game needs to unload the original role data and reload the role data based on the new (parameters can be obtained from login).|
+|onGameSwitchAccountCallback|This callback is invoked when the switch account function within the game is clicked (call JFSDK.getInstance().switchAccount(MainActivity.this)). The game's account switch logic needs to be implemented within this callback.|
 
-#### 3.2：sdk的初始化
+#### 3.2: SDK Initialization
 
-##### 3.2.1：代码部分
+##### 3.2.1: Code Section
 
-主类中生成对象
+In the main class, generate the object:
 ```
 using jfsdk;
 private static CallBackListener JFListener;
 ```
 
-初始化方法中调用
+Call the initialization method:
 ```
 JFListener = new CallBackListener();
 JFSDK.getInstance().init(JFListener);
 ```
 
-##### 3.2.2：参数说明
+##### 3.2.2: Parameter Description
 
-1、初始化sdk资源，注册sdk事件监听器。  
+1. Initialize SDK resources and register SDK event listeners.
+2. CallBackListener is the class generated in 3.1.2.
 
-2、CallBackListener 为3.1.2中生成的类
+##### 3.2.3: Callback Description
 
-##### 3.2.3：回调说明
+The success and failure of initialization will callback to the onInitSuccessCallback and onInitFaildCallback in 3.1. The CP can handle accordingly based on the callback results.
 
-初始化的成功失败会回调 3.1中的onInitSuccessCallback 和 onInitFaildCallback cp可根据回调结果做出相应处理
+#### 3.3: Login
 
-#### 3.3：登录
+##### 3.3.1: Login Trigger Description
 
-##### 3.3.1：登录拉起说明
+The method needs to be called in the UI thread.
 
-方法需要在UI线程中调用，
-
-代码调用：
+Code call:
 ```
 JFSDK.getInstance().doLogin();
 ```
 
-##### 3.3.2：登录回调说明
+##### 3.3.2: Login Callback Description
 
-回调说明:登录和注册的失败会回调到3.1中的onLoginSuccessCallback和onLoginFailedCallback cp可根据回调结果做出相应处理
+The success and failure of login and registration will callback to the onLoginSuccessCallback and onLoginFailedCallback in 3.1. The CP can handle accordingly based on the callback results.
 
-##### 3.3.3：返回参数说明：
+##### 3.3.3: Return Parameter Description
 
-登录或注册成功回调方法：onLoginSuccessCallback
-回调参数说明：
-|参数名|类型|参数说明|
+Login or registration success callback method: onLoginSuccessCallback
+
+Callback Parameter Description:
+
+| Parameter Name | Type | Parameter Description |
 |-------------|-------------|-------------|
-|userId|string|登录成功后，用户的]()userId（唯一）|
-|token|string|用户此次登录平台分配的唯一token（唯一）|
-|userName|string|用户名|
-|isAuthenticated|boolean|是否已经实名认证,true(是),false(否)|
-|pi|String|(防沉迷预留字段)|
-|age|int|年龄|
+|userId|string|User ID after successful login (unique)|
+|token|string|Unique token assigned to the user by the platform during this login (unique)|
+|userName|string|User name|
+|isAuthenticated|boolean|Whether the user is authenticated, true (yes), false (no)|
+|pi|String|(Reserved field for addiction prevention)|
+|age|int|Age|
 
+Login failure callback method: onLoginFaild
 
-登录失败回调方法：onLoginFaild
-该方法在产生业务逻辑错误时调用。
-回调参数说明：
-|参数名|类型|参数说明|
+This method is called when a business logic error occurs.
+
+Callback Parameter Description:
+
+| Parameter Name | Type | Parameter Description |
 |-------------|-------------|-------------|
-|code|string|登录失败错误码|
-|errorMsg|string|登录失败的消息提示|
+|code|string|Login failure error code|
+|errorMsg|string|Login failure message prompt|
 
-#### 3.4：支付
+#### 3.4: Payment
 
-##### 3.4.1 支付接口
+##### 3.4.1 Payment Interface
 
 ```
 JFSDK.getInstance().showPay(jfOrderInfo);
 ```
 
-参数说明
-|字段|说明|
+Parameter Description
+
+| Field | Description |
 |-------------|-------------|
-|level	角色等级|
-|goodsId|商品Id (商品编号) 没有传 “1”|
-|goodsName|商品名称(String)不可为null不可为空串|
-|goodsDes|商品描述(String)不可为null不可为空串|
-|price|钱数 (int数字类型字符串)不可为null不可为空串(单位元)|
-|serverId|区服ID 不可为null不可为空串|
-|serverName|区服名称（必传）不可为null不可为空串|
-|roleId|角色游戏内唯一标示（必传）(不可为null不可为空串)|
-|roleName|角色名称（必传）|
-|vip|用户Vip等级 没有传 “1”|
-|remark|透传字段（无特殊情况 请传入订单号（cpOrderId））|
-|cpOrderId|Cp生成的订单号（必传）|
+|level | Character level |
+|goodsId | Product ID (product code), if not available, pass "1" |
+|goodsName | Product name (string), cannot be null or empty |
+|goodsDes | Product description (string), cannot be null or empty |
+|price | Amount (int, string type), cannot be null or empty (unit yuan) |
+|serverId | Server ID, cannot be null or empty |
+|serverName | Server name (required), cannot be null or empty |
+|roleId | Unique identifier for the character in the game (required), cannot be null or empty |
+|roleName | Character name (required) |
+|vip | User VIP level, if not available, pass "1" |
+|remark | Pass-through field (if no special case, please pass the order number (cpOrderId)) |
+|cpOrderId | CP generated order number (required) |
 
-##### 3.4.2：支付的回调
+##### 3.4.2: Payment Callback Description
 
-支付涉及三个回调，创建订单成功，支付成功，支付失败。分别会回调到3.1中的
+Payment involves three callbacks: creating an order successfully, payment success, and payment failure. They will respectively callback to the onCreatedOrderCallback, onPaySuccess, and onPayFaild in 3.1.
 
-onCreatedOrderCallback，onPaySuccess，onPayFaild
+##### 3.4.3: Callback Return Object Field Explanation
 
-##### 3.4.3：回调返回对象字段解释
-
-onPaySuccess，onCreatedOrderCallback，onPayFaild
-```
-PaySuccessInfo｛
-public String orderId;  //服务端生成的唯一订单号
-
-public String gameRole;// 游戏端传入的角色Id
-
-public String gameArea;  //游戏端传入的区服信息
-
-public String productName;  //游戏端传入的商品名称
-
-public String productDesc;  ///游戏端传入的商品描述
-
-public String remark;  //游戏端传入的自定义参数
-
-public String cpOrderId;  //cp传入的订单号
-
-｝
-
-CreateOrderInfo｛
-
-public String orderId;  //sdk服务端生成的唯一订单号
-
-public String gameRole;//游戏端传入的角色Id
-
-public String gameArea;  //游戏端传入的区服信息
-
-public String productName;  //游戏端传入的商品名称
-
-public String productDesc;  //游戏端传入的商品描述
-
-public String cpOrderId;  //cp传入的订单号
-
-public String remark;  //游戏端传入的自定义参数｝
-
-PayFaildInfo｛
-
-private String code; //错误码
-
-private String msg;	//失败说明	｝
+onPaySuccess, onCreatedOrderCallback, onPayFaild
 
 ```
+PaySuccessInfo{
+public String orderId;  // Unique order number generated by the server
 
-#### 3.5：平台浮点，用户中心（必须调用）
+public String gameRole; // Game role ID passed by the game
 
-##### 3.5.1：功能说明
+public String gameArea;  // Server information passed by the game
 
-登录完成后，可以通过悬浮按钮进入个人中心  
+public String productName;  // Product name passed by the game
 
- 查看平台帐号信息  
+public String productDesc;  // Product description passed by the game
 
- 设置帐号密码保护  
- 
- 帐号绑定手机  
+public String remark;  // Custom parameters passed by the game
 
- 修改帐号密码  
+public String cpOrderId;  // Order number passed by the CP
+}
 
- 管理支付密码，查看充值和消费记录  
+CreateOrderInfo{
+public String orderId;  // Unique order number generated by the SDK server
 
-##### 3.5.2：API调用
+public String gameRole; // Game role ID passed by the game
 
-1、浮点的显示  
+public String gameArea;  // Server information passed by the game
 
-代码：
+public String productName;  // Product name passed by the game
+
+public String productDesc;  // Product description passed by the game
+
+public String cpOrderId;  // Order number passed by the CP
+
+public String remark;  // Custom parameters passed by the game
+}
+
+PayFaildInfo{
+private String code; // Error code
+
+private String msg;  // Failure description
+}
+```
+
+#### 3.5: Platform Floating Point and User Center (must be called)
+
+##### 3.5.1: Function Description
+
+After logging in, users can access the personal center through the floating button to:
+
+- View platform account information
+- Set account password protection
+- Bind account to phone
+- Change account password
+- Manage payment passwords and view recharge and consumption records
+
+##### 3.5.2: API Call
+
+1. Display Floating Point
+
+Code:
 ```
 JFSDK.getInstance().showFloatView();
 ```
 
-2、浮点的隐藏
-代码：
+2. Hide Floating Point
+Code:
 ```
-JFSDK.getInstance().removeFloatView(){}//隐藏悬浮窗口
+JFSDK.getInstance().removeFloatView();// Hide floating window
 ```
-##### 3.5.3：API调用位置
+##### 3.5.3: API Call Position
 
-1：浮点的显示
+1. Display Floating Point
 
-登陆成功回调内调用
+Call within the login success callback
 
+#### 3.6: Game Data Synchronization (must be called)
 
-#### 3.6: 游戏数据同步（必须调用）
+##### 3.6.1: Explanation
 
-##### 3.6.1:说明
+During the first login or when role information changes, the SDK needs to synchronize role information. There are four types of role information:
 
-首次登入游戏或角色信息发生变化时sdk需要同步角色信息，角色信息分为四种类型
-
-|类型|Type值|调用方法|
+| Type | Type Value | Call Method |
 |-------------|-------------|-------------|
-|角色创建|1|JFSDK.getInstance().syncInfo(roleInfo);|
-|角色登陆|2|JFSDK.getInstance().syncInfo(roleInfo);|
-|角色升级|3|JFSDK.getInstance().syncInfo(roleInfo);|
-|角色退出|4|JFSDK.getInstance().syncInfo(roleInfo);|
+|Role Creation|1|JFSDK.getInstance().syncInfo(roleInfo);|
+|Role Login|2|JFSDK.getInstance().syncInfo(roleInfo);|
+|Role Upgrade|3|JFSDK.getInstance().syncInfo(roleInfo);|
+|Role Exit|4|JFSDK.getInstance().syncInfo(roleInfo);|
 
+The code is as shown in 3.6.2. Different types pass different type values.
 
-代码如下3.6.2所示，不同类型传入不同type值
+##### 3.6.2: Call Example (Role Creation)
 
-##### 3.6.2：调用示例(角色创建)
-
-|字段|说明|
+| Field | Description |
 |-------------|-------------|
-|serverName|服务器名称(必传)|
-|serverId|服务器ID(必传)|
-|roleName|角色名称(必传)|
-|roleId|角色ID(必传)|
-|partyId|公会id（尽量传）|
-|partyName|公会名称（尽量传）|
-|gameRoleLevel|角色等级(必传)|
-|attach|额外字段|
-|type|1:创建，2：登录，3：升级 4：退出(必传)|
-|experience|当前经验值（尽量传）|
-|roleCreateTime|角色创建时间 long（type为1传入）|
-|vipLevel|Vip等级 int（尽量传）|
-|gameRolePower|战力值 int（尽量传）|
+|serverName | Server name (required) |
+|serverId | Server ID (required) |
+|roleName | Role name (required) |
+|roleId | Role ID (required) |
+|partyId | Guild ID (if available, pass) |
+|partyName | Guild name (if available, pass) |
+|gameRoleLevel | Role level (required) |
+|attach | Extra field |
+|type | 1: Creation, 2: Login, 3: Upgrade, 4: Exit (required) |
+|experience | Current experience value (if available, pass) |
+|roleCreateTime | Role creation time long (pass when type is 1) |
+|vipLevel | VIP level int (if available, pass) |
+|gameRolePower | Combat power int (if available, pass) |
 
-调用代码：
+Call code:
 ```
 JfRoleInfo roleInfo = new JfRoleInfo();
 
 roleInfo.setGameRoleLevel("3");
 
-roleInfo.setRoleId("角色id");
+roleInfo.setRoleId("Role ID");
 
 roleInfo.setGameRolePower(55555);
 
-roleInfo.setServerId("服务器ID");
+roleInfo.setServerId("Server ID");
 
-roleInfo.setServerName("服务器名称");
+roleInfo.setServerName("Server Name");
 
-roleInfo.setRoleName("柳鸿振");
+roleInfo.setRoleName("Liu Hongzhen");
 
 roleInfo.setExperience("135355446");
 
-roleInfo.setPartyId("公会ID");
+roleInfo.setPartyId("Guild ID");
 
-roleInfo.setPartyName("公会名称");
+roleInfo.setPartyName("Guild Name");
 
 roleInfo.setRoleCreateTime(System.currentTimeMillis());
 
@@ -346,34 +340,32 @@ roleInfo.setType("1");
 JFSDK.getInstance().syncInfo(roleInfo);
 ```
 
-#### 3.8：游戏退出
+#### 3.8: Game Exit
 
-##### 3.8.1：API的使用
+##### 3.8.1: API Usage
 
-调用JFSDK.getInstance().exitLogin();
+Call JFSDK.getInstance().exitLogin();
 
-##### 3.8.2：回调说明
+##### 3.8.2: Callback Description
 
-点击返回键调用 JFSDK.getInstance().exitLogin();
+When the back button is pressed, call JFSDK.getInstance().exitLogin();
 
-选择退出是 会回调 （3.1）SdkEventListener 内的 onExitCallback()方法 在此方法里面执行游戏界面的关闭
+Choosing to exit will callback to the onExitCallback() method in SdkEventListener (3.1). The game interface closure should be executed inside this method.
 
+##### 3.8.3: In-Game Exit
 
-
-##### 3.8.3：游戏内退出
-
-游戏内出现顶号或者主动注销账号的时候调用
+When kicked off or voluntarily logging out in the game, call:
 
 JFSDK.getInstance().logoutLogin();
 
-#### 3.9：注销登录（必须实现）
+#### 3.9: Logout Login (must implement)
 
-点击个人中心的退出当前账户按钮，会回调**（3.1）中的onLogoutLoginCallback**接口 此接口内需实现返回游戏登录界面的代码 游戏方执行
+Clicking the exit current account button in the personal center will callback to the onLogoutLoginCallback interface in 3.1. The code for returning to the game login page should be implemented inside this interface.
 
-#### 3.10:SDK生命周期接口（必须实现）
+#### 3.10: SDK Lifecycle Interface (must implement)
 
 ```
-public void onCreate(AndroidJavaObject act);（必须先于 SDK 的 init 前调用）
+public void onCreate(AndroidJavaObject act); (Must be called before SDK's init call)
 
 public void onResume(AndroidJavaObject act);
 
@@ -389,38 +381,37 @@ public void onDestroy(AndroidJavaObject act);
 
 public void onNewIntent(AndroidJavaObject act, AndroidJavaObject intent);
 
-public void onActivityResult(AndroidJavaObject act,int requestCode, int resultCode, AndroidJavaObject intent);
+public void onActivityResult(AndroidJavaObject act, int requestCode, int resultCode, AndroidJavaObject intent);
 
-public void onWindowFocusChanged(boolean hasFocus)
+public void onWindowFocusChanged(boolean hasFocus);
 
-public void onBackPressed()
+public void onBackPressed();
 
-public void onRequestPermissionsResult(Activity AndroidJavaObject, int requestCode, String[] permissions, int[] grantResults)
+public void onRequestPermissionsResult(AndroidJavaObject act, int requestCode, String[] permissions, int[] grantResults);
 ```
 
-#### 3.11:Application的添加（必接）
-若 App本身无自定义Application， 请在AndroidManifest.xml 中接入  
+#### 3.11: Application Addition (must integrate)
 
+If the app itself does not have a custom Application, please integrate in the AndroidManifest.xml.
 
-若 App本身有自定义Application,请继承或者调用 com.juefeng.sdk.juefengsdk. JfApplication  
+If the app itself has a custom Application, please inherit or call com.juefeng.sdk.juefengsdk.JfApplication.
 
-本sdk自带的的初始化方法中已经调用，如果碰到问题可以去掉自己实现
+This SDK’s own initialization method contains the call, if issues arise, it can be removed and implemented manually.
 
+#### 3.12: Account Switch in Game
 
-#### 3.12：游戏内账号切换
-
-游戏内有账号切换按钮时点击按钮需要调用一下接口
+When there is an account switch button in the game, you need to call:
 
 JFSDK.getInstance().switchAccount();
 
-接口会回调Listener 中的onGameSwitchAccountCallback接口参考3.1.3在接口内做相关处理
+The interface will callback to the onGameSwitchAccountCallback interface in the Listener (see 3.1.3) for related handling.
 
-#### 4 混淆
+#### 4: Obfuscation
 
-JFSDK包是以jar提供给用户的，已经半混淆状态，您在混淆自己APK包的时候请不要将jar包一起混淆，因为里面有自定义UI控件，若被混淆后会因为无法找到相关类而抛异常
+The JFSDK package is provided to users as a jar, which is already partially obfuscated. When obfuscating your own APK package, please do not obfuscate the jar package together, as it may contain custom UI controls that can cause exceptions if the relevant classes are not found after obfuscation.
 
-## 联系我们
+## Contact Us
 
-If you have any questions about this program, please contact us!  
+If you have any questions about this program, please contact us!
 
-Email: ouyangjie@juefeng.com
+Email: [ouyangjie@juefeng.com](mailto:ouyangjie@juefeng.com)
