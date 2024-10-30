@@ -274,10 +274,11 @@ public class JFSDK_DEMO_UI : MonoBehaviour
     }
 
 
-    //************************************************************以下是需要实现的回调接口*************************************************************************************************************************
-    //callback
 
 }
+
+//************************************************************以下是需要实现的回调接口*************************************************************************************************************************
+//callback
 
 public class CallBackListener : JFSDKListener
 {
@@ -383,5 +384,9 @@ public class CallBackListener : JFSDKListener
     public override void onSwitchAccountSuccessCallback(LogincallBack login)
     {
         Debug.Log("切换账号成功了");
+    }
+    public override void onSyncSuccessCallback()
+    {
+        Debug.Log("回调同步成功了");
     }
 }

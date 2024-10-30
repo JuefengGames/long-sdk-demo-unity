@@ -222,11 +222,9 @@ namespace jfsdk
             }
             else
             {
-                AndroidJavaObject initApp = new AndroidJavaObject("com.juefeng.sdk.juefengsdk.JfApplication");
-                initApp.Call("onCreate");
                 Debug.Log("开始初始化SDK");
-                ao.Call("onCreate", unityActivity);
                 ao.Call("init", unityActivity, listener);
+                Debug.Log(unityActivity);
             }
         }
 

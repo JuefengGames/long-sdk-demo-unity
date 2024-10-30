@@ -24,6 +24,7 @@ namespace jfsdk
         public abstract void onLogoutLoginCallback();
         public abstract void onSwitchAccountSuccessCallback(LogincallBack login);
         public abstract void onGameSwitchAccountCallback();
+        public abstract void onSyncSuccessCallback();
 
         //callback end
 
@@ -107,6 +108,9 @@ namespace jfsdk
         {
             onGameSwitchAccountCallback();
         }
-
+        public void onSyncSuccess()
+        {
+            onSyncSuccessCallback();
+        }
     }
 }
