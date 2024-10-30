@@ -224,7 +224,6 @@ namespace jfsdk
             {
                 Debug.Log("开始初始化SDK");
                 ao.Call("init", unityActivity, listener);
-                Debug.Log(unityActivity);
             }
         }
 
@@ -266,7 +265,7 @@ namespace jfsdk
 
         public void removeFloatView()
         {
-            Debug.Log("开始显示悬浮球");
+            Debug.Log("开始移除悬浮球");
             ao.Call("removeFloatView");
         }
 
