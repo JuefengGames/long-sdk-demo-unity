@@ -376,7 +376,26 @@ JFSDK.getInstance().logoutLogin();
 
 点击个人中心的退出当前账户按钮，会回调**（3.1）中的onLogoutLoginCallback**接口 此接口内需实现返回游戏登录界面的代码 游戏方执行
 
-#### 3.10:SDK生命周期接口（必须实现）
+#### 3.10:SDK生命周期（SDK已经自动实现 需要在AndroidManifest.xml文件中加入如下配置，参考demo）
+
+```
+    <application  android:name="com.juefeng.sdk.juefengsdk.JfApplication">
+       <activity android:name="com.juefeng.sdk.juefengsdk.ui.activity.JfUnityActivity"
+            android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen"
+            android:screenOrientation="landscape"
+            android:launchMode="singleTask"
+			android:exported="true"
+            android:configChanges="orientation|navigation|screenSize|keyboard|keyboardHidden">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+	......
+     </application>
+```
+
+#### 生命周期手动调用接口
 
 ```
 public void onCreate(AndroidJavaObject act);（必须先于 SDK 的 init 前调用）

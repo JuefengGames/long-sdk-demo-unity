@@ -362,7 +362,26 @@ JFSDK.getInstance().logoutLogin();
 
 Clicking the exit current account button in the personal center will callback to the onLogoutLoginCallback interface in 3.1. The code for returning to the game login page should be implemented inside this interface.
 
-#### 3.10: SDK Lifecycle Interface (must implement)
+#### 3.10: SDK lifecycle (The SDK is automatically implemented; you need to add the following configuration to the AndroidManifest.xml file, as referenced in the demo)
+
+```
+    <application  android:name="com.juefeng.sdk.juefengsdk.JfApplication">
+       <activity android:name="com.juefeng.sdk.juefengsdk.ui.activity.JfUnityActivity"
+            android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen"
+            android:screenOrientation="landscape"
+            android:launchMode="singleTask"
+			android:exported="true"
+            android:configChanges="orientation|navigation|screenSize|keyboard|keyboardHidden">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+	......
+     </application>
+```
+
+#### Lifecycle Manual Interface Call
 
 ```
 public void onCreate(AndroidJavaObject act); (Must be called before SDK's init call)
