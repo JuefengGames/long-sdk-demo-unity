@@ -12,7 +12,8 @@
 Assest
 ├── Plugins			           // LongSDK 文件存放和SDK接入代码目录通常不需要修改	  编写自己的工程时候请把本目录直接拷贝过去
 |          ├──Android
-|          |         ├──haiwai-5.4.3.aar   //LongSDK文件存放目录  如果要接入自己的工程需要修改包中的 AndroidManifest.xml相关配置
+|          |         ├──JFSDK5.6.0.aar   //LongSDK文件存放在此处  
+|          |         ├──AndroidManifest.xml   //  项目的清单文件放在此处，unity打包安卓apk文件就会用这个清单文件打包，最好保证aar包中的AndroidManifest.xml文件和这个位置的文件内容保持一致
 |          |          
 |          ├──script                       //unity 对接 SDK相关代码 本目录下代码一般不需要修改
 |          |         ├──JFSDK.cs
@@ -70,7 +71,7 @@ request和response的编码格式为UTF-8。
 
 #### 2.2：AndroidManifest.xml文件的配制
 
-需要修改 aar包中的 AndroidManifest.xml 文件中的 JF_APPID和JF_APPKEY为绝锋游戏平台所提供的JF_APPID和JF_APPKEY
+需要修改 aar包中和aar包同目录下的 AndroidManifest.xml 文件中的 JF_APPID和JF_APPKEY为绝锋游戏平台所提供的JF_APPID和JF_APPKEY
 
 ### 三、 sdk业务接口代码说明
 

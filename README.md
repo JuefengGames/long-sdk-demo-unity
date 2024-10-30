@@ -12,7 +12,8 @@ This project, generated using the Unity development platform, primarily aims to 
 Assets
 ├── Plugins                                   // LongSDK files and SDK integration code directory, usually do not need modification. Please copy this directory to your own project during development.
 |          ├──Android
-|          |         ├──haiwai-5.4.3.aar     // LongSDK file storage directory. If integrating into your own project, modify the AndroidManifest.xml related configurations within the package.
+|          |         ├──JFSDK5.6.0.aar     // LongSDK file is placed here.
+|          |         ├──AndroidManifest.xml   //The project's manifest file is placed here. When Unity builds the Android APK file, it will use this manifest file for packaging. It's best to ensure that the content of the AndroidManifest.xml file in the AAR package remains consistent with the file in this location.
 |          |          
 |          ├──script                         // Unity encapsulated LongSDK (Android) related code, usually do not need modification.
 |          |         ├──JFSDK.cs
