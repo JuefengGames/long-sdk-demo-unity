@@ -101,7 +101,7 @@ public class CallBackListener : JFSDKListener
 | onPayFaild(PayFaildInfo payFaildInfo)    | Payment failure; Parameters: payFaildInfo (error message and explanation)                                        |
 | onExitCallback(String desc)              | Exit success; Parameters: desc (string "Successfully exited")                                                   |
 | onCancleExitCallback(String desc)        | Cancel exit, choose to continue the game; Parameters: desc (string "Cancel exit")                               |
-| onCreatedOrderCallback(CreateOrderInfo creatOrderInfo) | Successful order creation; creatOrderInfo (order information)                                                   |
+| onCreatedOrderCallback(CreateOrderInfo creatOrderInfo) | Successful order creation; creatOrderInfo (order information)  【Abandoned, do not use】                 |
 | onLogoutLoginCallback()                  | Logout account (exit game, return to login screen on this callback)                                             |
 | onSwitchAccountSuccessCallback           | Triggered when an internal SDK account switch succeeds. Clear old role data and load new data accordingly.          |
 | onGameSwitchAccountCallback              | Invoked when the game has an account switch feature. Implement switch account logic within this callback.           |
