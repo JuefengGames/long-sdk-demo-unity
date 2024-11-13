@@ -353,7 +353,7 @@ public class CallBackListener : JFSDKListener
         }
         catch
         {
-            Debug.LogError("处理登录成功异常了！！！");
+            Debug.LogError("处理登录回调异常了！！！");
         }
     }
 

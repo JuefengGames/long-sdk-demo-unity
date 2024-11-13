@@ -190,7 +190,7 @@ JFSDK.getInstance().showPay(jfOrderInfo);
 |goodsId|商品Id (商品编号) 没有传 “1”|
 |goodsName|商品名称(String)不可为null不可为空串|
 |goodsDes|商品描述(String)不可为null不可为空串|
-|price|钱数 (int数字类型字符串)不可为null不可为空串(单位元)|
+|price|商品价格，不可为null、""， 默认为单位为美金（如果是默认为其他货币单位，可以和绝峰运营提前沟通），支持两位小数。|
 |serverId|区服ID 不可为null不可为空串|
 |serverName|区服名称（必传）不可为null不可为空串|
 |roleId|角色游戏内唯一标示（必传）(不可为null不可为空串)|

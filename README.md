@@ -187,7 +187,7 @@ Parameter Description
 |goodsId | Product ID (product code), if not available, pass "1" |
 |goodsName | Product name (string), cannot be null or empty |
 |goodsDes | Product description (string), cannot be null or empty |
-|price | Amount (int, string type), cannot be null or empty (unit yuan) |
+|price | The product price cannot be null or an empty string. By default, it is in USD (if the default is another currency, please communicate with the Zhefeng operations team in advance) and supports two decimal places. |
 |serverId | Server ID, cannot be null or empty |
 |serverName | Server name (required), cannot be null or empty |
 |roleId | Unique identifier for the character in the game (required), cannot be null or empty |
