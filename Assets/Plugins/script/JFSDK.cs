@@ -56,7 +56,18 @@ namespace jfsdk
         {
             JFSDKImp.getInstance().onCreate(act);
         }
-
+        public void SwitchAccount()
+        {
+            JFSDKImp.getInstance().switchAccount();
+        }
+        public void syncUserId(string userId, string token)
+        {
+            JFSDKImp.getInstance().syncUserId(userId, token);
+        }
+        public string getChannelType()
+        {
+            return JFSDKImp.getInstance().getChannelType();
+        }
         public void OnResume(AndroidJavaObject act)
         {
             JFSDKImp.getInstance().onResume(act);

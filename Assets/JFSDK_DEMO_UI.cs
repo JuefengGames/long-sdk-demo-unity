@@ -109,7 +109,11 @@ public class JFSDK_DEMO_UI : MonoBehaviour
                 Debug.LogError("请先初始化！！！");
                 return;
             }
+            //绝峰登录
             JFSDK.getInstance().doLogin();
+            //非绝峰登录
+            //JFSDK.getInstance().syncUserId("1223", "juwckwjhcuu38927J");
+            Debug.Log("下游渠道标识：" + JFSDK.getInstance().getChannelType());
         }
         catch (Exception ex)
         {
@@ -387,6 +391,7 @@ public class CallBackListener : JFSDKListener
     }
     public override void onSyncSuccessCallback()
     {
-        Debug.Log("回调同步成功了");
+        Debug.Log("非绝峰登录成功了");
+        JFSDK_DEMO_UI.token = "yourtoken";
     }
 }

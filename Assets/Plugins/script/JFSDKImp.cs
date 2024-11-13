@@ -87,6 +87,23 @@ namespace jfsdk
 			androidSupport.switchAccount();
 #endif
         }
+        public void syncUserId(string userId, string token)
+        {
+#if UNITY_ANDROID && !UNITY_EDITOR
+			JFUnitySupportAndroid androidSupport = JFUnitySupportAndroid.getInstance();
+			androidSupport.syncUserId(userId,token);
+#endif
+        }
+
+        public string getChannelType()
+        {
+#if UNITY_ANDROID && !UNITY_EDITOR
+			JFUnitySupportAndroid androidSupport = JFUnitySupportAndroid.getInstance();
+			return androidSupport.getChannelType();
+#else
+            return "";
+#endif
+        }
         public void onCreate(AndroidJavaObject act)
         {
 #if UNITY_ANDROID && !UNITY_EDITOR
@@ -308,6 +325,19 @@ namespace jfsdk
             Debug.Log("开始调用SDK切换账户方法");
             ao.Call("switchAccount", unityActivity);
         }
+
+        public void syncUserId(string userId, string token)
+        {
+            Debug.Log("开始调用SDK非绝峰登录方法");
+            ao.Call("syncUserId", userId,token);
+        }
+
+        public string getChannelType()
+        {
+            Debug.Log("开始调用SDK获取渠道标识方法");
+            return ao.Call<string>("getChannelType");
+        }
+
         public void onCreate(AndroidJavaObject act)
         {
             Debug.Log("开始调用SDK onCreate 方法");

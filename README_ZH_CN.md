@@ -111,6 +111,7 @@ public class CallBackListener : JFSDKListener
 |onLogoutLoginCallback()|注销账号登录（需在此回调中退出游戏，返回登录页面）|
 |onSwitchAccountSuccessCallback|此回调接口是在当SDK内部有切换帐号的功能，且切换成功时会调用，游 戏方需要在这个回调接口中注销原来的角色数据，然后根据新的 (参数 login中可以获取到)来重新加载角色数据；|
 |onGameSwitchAccountCallback|此接口是在游戏内有账号切换功能点击 调用 JFSDK.getInstance().switchAccount(MainActivity.this);后回调 游戏方账号切换逻辑需要在此回调中执行|
+|onSyncSuccess|研发使用自己登录时，同步给渠道userId，成功时回调|
 
 #### 3.2：sdk的初始化
 
@@ -138,9 +139,11 @@ JFSDK.getInstance().init(JFListener);
 
 初始化的成功失败会回调 3.1中的onInitSuccessCallback 和 onInitFaildCallback cp可根据回调结果做出相应处理
 
-#### 3.3：登录
+#### 3.3：登录(二选一)
 
-##### 3.3.1：登录拉起说明
+##### 3.3.1 绝峰登录
+
+##### 3.3.1.1：绝峰登录拉起说明
 
 方法需要在UI线程中调用，
 
@@ -149,11 +152,11 @@ JFSDK.getInstance().init(JFListener);
 JFSDK.getInstance().doLogin();
 ```
 
-##### 3.3.2：登录回调说明
+##### 3.3.1.2：登录回调说明
 
 回调说明:登录和注册的失败会回调到3.1中的onLoginSuccessCallback和onLoginFailedCallback cp可根据回调结果做出相应处理
 
-##### 3.3.3：返回参数说明：
+##### 3.3.1.3：返回参数说明：
 
 登录或注册成功回调方法：onLoginSuccessCallback
 回调参数说明：
@@ -175,6 +178,16 @@ JFSDK.getInstance().doLogin();
 |code|string|登录失败错误码|
 |errorMsg|string|登录失败的消息提示|
 
+##### 3.3.2 不使用绝峰登录
+
+代码调用：
+```
+JFSDK.getInstance().syncUserId(String userId, String token);
+```
+
+若使用游戏自己的账号体系（使用游戏自带的登录注册功能），则需要接入此方法。请将登录后的用户唯一标识userId及用户token凭证使用本方法接入，接入后会回调onSyncSuccess方法
+注：为了保证用户安全及合法性，建议研发根据我方要求提供一个服务端验证接口，userId,token 将作为验证参数传入 具体参考服务端文档
+
 #### 3.4：支付
 
 ##### 3.4.1 支付接口
@@ -189,15 +202,17 @@ JFSDK.getInstance().showPay(jfOrderInfo);
 |level	角色等级|
 |goodsId|商品Id (商品编号) 没有传 “1”|
 |goodsName|商品名称(String)不可为null不可为空串|
-|goodsDes|商品描述(String)不可为null不可为空串|
+|goodsDes|商品描述(String)不可为null不可为空串，最大长度：64字符|
 |price|商品价格，不可为null、""， 默认为单位为美金（如果是默认为其他货币单位，可以和绝峰运营提前沟通），支持两位小数。|
-|serverId|区服ID 不可为null不可为空串|
-|serverName|区服名称（必传）不可为null不可为空串|
-|roleId|角色游戏内唯一标示（必传）(不可为null不可为空串)|
-|roleName|角色名称（必传）|
+|serverId|区服ID 不可为null不可为空串，需和角色信息同步中的值相同|
+|serverName|区服名称（必传）不可为null不可为空串，需和角色信息同步中的值相同|
+|roleId|角色游戏内唯一标示（必传）(不可为null不可为空串)，需和角色信息同步中的值相同|
+|roleName|角色名称（必传），需和角色信息同步中的值相同|
 |vip|用户Vip等级 没有传 “1”|
-|remark|透传字段（无特殊情况 请传入订单号（cpOrderId））|
-|cpOrderId|Cp生成的订单号（必传）|
+|remark|透传字段（无特殊情况 请传入订单号（cpOrderId）），最大长度：64字符|
+|cpOrderId|游戏开发者的订单号，请务必保证数据唯一。|
+
+注：所有字段不得为空，没有默认传值“1”
 
 ##### 3.4.2：支付的回调
 
@@ -317,9 +332,11 @@ JFSDK.getInstance().removeFloatView(){}//隐藏悬浮窗口
 |attach|额外字段|
 |type|1:创建，2：登录，3：升级 4：退出(必传)|
 |experience|当前经验值（尽量传）|
-|roleCreateTime|角色创建时间 long（type为1传入）|
+|roleCreateTime|type = 1时必传，角色创建时间 （必传|
 |vipLevel|Vip等级 int（尽量传）|
 |gameRolePower|战力值 int（尽量传）|
+
+注：所有字段不得为空，如果无法提供数据，默认传值“1”
 
 调用代码：
 ```
@@ -371,6 +388,7 @@ JFSDK.getInstance().syncInfo(roleInfo);
 游戏内出现顶号或者主动注销账号的时候调用
 
 JFSDK.getInstance().logoutLogin();
+调用此接口后会回调onLogoutLogin（回调接口见3.1api说明），请在此回调中退出游戏至登录见面，然后重新调用登录接口
 
 #### 3.9：注销登录（必须实现）
 
@@ -426,6 +444,9 @@ public void onRequestPermissionsResult(Activity AndroidJavaObject, int requestCo
 #### 3.11:Application的添加（必接）
 若 App本身无自定义Application， 请在AndroidManifest.xml 中接入  
 
+```
+<application  android:name="com.juefeng.sdk.juefengsdk.JfApplication" />
+```
 
 若 App本身有自定义Application,请继承或者调用 com.juefeng.sdk.juefengsdk. JfApplication  
 
@@ -439,6 +460,35 @@ public void onRequestPermissionsResult(Activity AndroidJavaObject, int requestCo
 JFSDK.getInstance().switchAccount();
 
 接口会回调Listener 中的onGameSwitchAccountCallback接口参考3.1.3在接口内做相关处理
+
+#### 3.13：获取下游渠道标识
+
+```
+String channelType = JFSDK.getInstance().getChannelType()；
+```
+
+目前海外渠道编号如下(区分大小写)
+
+|渠道名称|编号|
+|-------------|-------------|
+|绝峰母包|""|
+|小米|xiaomiglobal|
+|小米测试|mitest|
+|TapTap|taptap|
+|RuStore|RuStore|
+|QooApp|QooAPP|
+|OneStore|onestore|
+|雷电模拟器|leidianglobal|
+|荣耀手机|rongyao|
+|华为手机|huawei|
+|蓝叠模拟器|nowgg|
+|Aptoide|Aptoide|
+|AppBazar|AppBazar|
+|亚马逊|Amazon|
+|小七海外版|xiao7|
+|xsolla|aikesuola|
+|DMM|dmm|
+|三星手机|sanxingglobal|
 
 #### 4 混淆
 
