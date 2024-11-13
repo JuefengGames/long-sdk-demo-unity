@@ -242,7 +242,7 @@ PayFaildInfo {
 }
 ```
 
-#### 3.5: Platform Floating, User Center (Required)
+#### 3.5: Platform Floating, User Center (SDK has been automatically called to achieve no need for manual calling)
 
 ##### 3.5.1 Functionality Description
 
@@ -264,10 +264,6 @@ JFSDK.getInstance().showFloatView();
 ```csharp
 JFSDK.getInstance().removeFloatView(); // Hide floating window
 ```
-
-##### 3.5.3 API Call Location
-
-- Display the floating widget after login success callback.
 
 #### 3.6: Game Data Synchronization (Required)
 
