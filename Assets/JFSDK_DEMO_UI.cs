@@ -112,9 +112,9 @@ public class JFSDK_DEMO_UI : MonoBehaviour
                 return;
             }
             //绝峰登录
-            //JFSDK.getInstance().doLogin();
+            JFSDK.getInstance().doLogin();
             //非绝峰登录
-            JFSDK.getInstance().syncUserId("1223", "juwckwjhcuu38927J");
+            //JFSDK.getInstance().syncUserId("1223", "juwckwjhcuu38927J");
             Debug.Log("下游渠道标识：" + JFSDK.getInstance().getChannelType());
         }
         catch (Exception ex)

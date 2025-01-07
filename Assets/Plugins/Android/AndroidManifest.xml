@@ -87,11 +87,11 @@
             android:value="true" />
         <meta-data
             android:name="JF_APPID"
-            android:value="81591" />
+            android:value="81205" />
         <meta-data
             android:name="JF_APPKEY"
-            android:value="E07982D77E4865AF7FF140CEAE07705B" />
-        <meta-data android:name="JF_LOGIN_TYPE" android:value="2"/>
+            android:value="1F9A13ECF1554762D54F149286D8AD48" />
+        <meta-data android:name="JF_LOGIN_TYPE" android:value="1"/>
     </application>
 
 </manifest>

@@ -162,7 +162,7 @@ public enum LoginType
 * 此逻辑仅在母包中测试使用，后续渠道包会替换此逻辑，改由绝峰控制
 *
 * value=1：JUEFENG_LOGIN
-* value=2: GAME_LOGIN
+* value=0: GAME_LOGIN
 */
 
 <meta-data android:name="JF_LOGIN_TYPE" android:value="1"/>

@@ -163,7 +163,7 @@ public enum LoginType
 * This logic is only for use in mother package testing. Subsequent channel packages will replace it as per Juefeng's control.
 *
 * value=1: JUEFENG_LOGIN
-* value=2: GAME_LOGIN
+* value=0: GAME_LOGIN
 */
 
 <meta-data android:name="JF_LOGIN_TYPE" android:value="1"/>
