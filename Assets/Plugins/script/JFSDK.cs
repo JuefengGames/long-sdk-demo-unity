@@ -1,5 +1,6 @@
 using UnityEngine;
 using System;
+using System.Collections.Generic;
 
 namespace jfsdk
 {
@@ -68,6 +69,16 @@ namespace jfsdk
         {
             return JFSDKImp.getInstance().getChannelType();
         }
+
+        public String getLoginType()
+        {
+            return JFSDKImp.getInstance().getLoginType();
+        }
+        public void queryProductDetailsAsync(List<String> finalList, ProductDetailsResponseListener PdListener)
+        {
+            JFSDKImp.getInstance().queryProductDetailsAsync(finalList, PdListener);
+        }
+
         public void OnResume(AndroidJavaObject act)
         {
             JFSDKImp.getInstance().onResume(act);
@@ -438,6 +449,12 @@ namespace jfsdk
 
     }
 
+    public enum LoginType
+    {
+        JuefengLogin,  // 绝峰登录
+        GameLogin      // 研发使用自己的登录
+    }
+
     public class JfRoleInfo
     {
         private String serverName;
@@ -604,4 +621,97 @@ namespace jfsdk
                     '}';
         }
     }
+    public class ProductDetails
+    {
+        private String sku;
+        private String title;
+        private String describe;
+        private String currency;
+        private String price;
+
+        private String currencySymbol;
+        private String remark1;
+        private String remark2;
+
+        public String getRemark1()
+        {
+            return remark1 == null ? "" : remark1;
+        }
+
+        public void setRemark1(String remark1)
+        {
+            this.remark1 = remark1;
+        }
+
+        public String getRemark2()
+        {
+            return remark2 == null ? "" : remark2;
+        }
+
+        public void setRemark2(String remark2)
+        {
+            this.remark2 = remark2;
+        }
+
+        public String getCurrencySymbol()
+        {
+            return currencySymbol == null ? "$" : currencySymbol;
+        }
+
+        public void setCurrencySymbol(String currencySymbol)
+        {
+            this.currencySymbol = currencySymbol;
+        }
+
+        public String getSku()
+        {
+            return sku == null ? "" : sku;
+        }
+
+        public void setSku(String sku)
+        {
+            this.sku = sku;
+        }
+
+        public String getTitle()
+        {
+            return title == null ? "" : title;
+        }
+
+        public void setTitle(String title)
+        {
+            this.title = title;
+        }
+
+        public String getDescribe()
+        {
+            return describe == null ? "" : describe;
+        }
+
+        public void setDescribe(String describe)
+        {
+            this.describe = describe;
+        }
+
+        public String getCurrency()
+        {
+            return currency == null ? "" : currency;
+        }
+
+        public void setCurrency(String currency)
+        {
+            this.currency = currency;
+        }
+
+        public String getPrice()
+        {
+            return price == null ? "" : price;
+        }
+
+        public void setPrice(String price)
+        {
+            this.price = price;
+        }
+    }
+
 }

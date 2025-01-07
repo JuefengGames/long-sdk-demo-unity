@@ -1,8 +1,51 @@
 using UnityEngine;
 using System;
+using System.Collections.Generic;
+using static UnityEngine.Application;
 
 namespace jfsdk
 {
+    //查询订单详情回调
+    public abstract class ProductDetailsResponseListener : AndroidJavaProxy
+    {
+        protected ProductDetailsResponseListener() : base("com.jfsdk.billing.interf.ProductDetailsResponseListener")
+        {
+        }
+        //callback
+        public abstract void onProductDetailsResponseCallback(List<ProductDetails> productDetailsList);
+
+        public void onProductDetailsResponse(AndroidJavaObject productDetailsList)
+        {
+
+
+            List<ProductDetails> uProductDetailsList = new List<ProductDetails>();
+            if (productDetailsList != null)
+            {
+                int size = productDetailsList.Call<int>("size");
+                Debug.Log("查询商品数据返回条数为：：" + size);
+                for (int i = 0; i < size; i++)
+                {
+                    AndroidJavaObject element = productDetailsList.Call<AndroidJavaObject>("get", i);
+                    ProductDetails uProductDetail = new ProductDetails();
+                    uProductDetail.setRemark1(element.Call<String>("getRemark1"));
+                    uProductDetail.setRemark2(element.Call<String>("getRemark2"));
+                    uProductDetail.setCurrencySymbol(element.Call<String>("getCurrencySymbol"));
+                    uProductDetail.setSku(element.Call<String>("getSku"));
+                    uProductDetail.setTitle(element.Call<String>("getTitle"));
+                    uProductDetail.setDescribe(element.Call<String>("getDescribe"));
+                    uProductDetail.setCurrency(element.Call<String>("getCurrency"));
+                    uProductDetail.setPrice(element.Call<String>("getPrice"));
+                    uProductDetailsList.Add(uProductDetail);
+                }
+            }
+            else
+            {
+                Debug.Log("查询商品信息返回为NULL，请联系管理员！！！");
+            }
+            onProductDetailsResponseCallback(uProductDetailsList);
+        }
+
+    }
     // JFSDKListener
     public abstract class JFSDKListener : AndroidJavaProxy
     {
@@ -25,6 +68,7 @@ namespace jfsdk
         public abstract void onSwitchAccountSuccessCallback(LogincallBack login);
         public abstract void onGameSwitchAccountCallback();
         public abstract void onSyncSuccessCallback();
+        public abstract void onSyncFailureCallback(String msg);
 
         //callback end
 
@@ -45,7 +89,7 @@ namespace jfsdk
         }
         public void onInitSuccess(String desc, Boolean isAutoLogin)
         {
-            onInitSuccessCallback(desc,isAutoLogin);
+            onInitSuccessCallback(desc, isAutoLogin);
         }
         public void onInitFaild(String desc)
         {
@@ -111,6 +155,10 @@ namespace jfsdk
         public void onSyncSuccess()
         {
             onSyncSuccessCallback();
+        }
+        public void onSyncFailure(String msg)
+        {
+            onSyncFailureCallback(msg);
         }
     }
 }

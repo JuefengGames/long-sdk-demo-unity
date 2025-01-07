@@ -112,6 +112,7 @@ public class CallBackListener : JFSDKListener
 |onSwitchAccountSuccessCallback|此回调接口是在当SDK内部有切换帐号的功能，且切换成功时会调用，游 戏方需要在这个回调接口中注销原来的角色数据，然后根据新的 (参数 login中可以获取到)来重新加载角色数据；|
 |onGameSwitchAccountCallback|此接口是在游戏内有账号切换功能点击 调用 JFSDK.getInstance().switchAccount(MainActivity.this);后回调 游戏方账号切换逻辑需要在此回调中执行|
 |onSyncSuccess|研发使用自己登录时，同步给渠道userId，成功时回调|
+|onSyncFailure(String msg)|研发使用自己登录时，同步给渠道userId，失败时回调，当收到此回调时，请勿进行下一步操作，同登录失败处理|
 
 #### 3.2：sdk的初始化
 
@@ -139,11 +140,37 @@ JFSDK.getInstance().init(JFListener);
 
 初始化的成功失败会回调 3.1中的onInitSuccessCallback 和 onInitFaildCallback cp可根据回调结果做出相应处理
 
-#### 3.3：登录(二选一)
+#### 3.3：登录
 
-##### 3.3.1 绝峰登录
+为了适配下游渠道，获取更多用户流量，默认情况下游戏母包内需要同时包含“游戏原有的登录”，“绝峰的登录”。上架具体渠道的时候，绝峰这边会分包，同时设置符合渠道要求的登录方式。（两种登录方式不会出现在同一个渠道包体内）
 
-##### 3.3.1.1：绝峰登录拉起说明
+##### 3.3.1 判断是否使用绝峰登录 (推荐接入)
+
+调用方式
+```
+LoginType loginType = JFSDK.getInstance().getLoginType();
+
+public enum LoginType
+{
+    JuefengLogin,  // 绝峰登录
+    GameLogin      // 研发使用自己的登录
+}
+
+
+/**
+* 以下配置请在AndroidManifest.xml文件中配置，用于母包切换的测试，value值会影响getLoginType()方法的返回值；
+* 此逻辑仅在母包中测试使用，后续渠道包会替换此逻辑，改由绝峰控制
+*
+* value=1：JUEFENG_LOGIN
+* value=2: GAME_LOGIN
+*/
+
+<meta-data android:name="JF_LOGIN_TYPE" android:value="1"/>
+```
+
+##### 3.3.2 绝峰登录
+
+##### 3.3.2.1：绝峰登录拉起说明
 
 方法需要在UI线程中调用，
 
@@ -152,11 +179,11 @@ JFSDK.getInstance().init(JFListener);
 JFSDK.getInstance().doLogin();
 ```
 
-##### 3.3.1.2：登录回调说明
+##### 3.3.2.2：登录回调说明
 
 回调说明:登录和注册的失败会回调到3.1中的onLoginSuccessCallback和onLoginFailedCallback cp可根据回调结果做出相应处理
 
-##### 3.3.1.3：返回参数说明：
+##### 3.3.2.3：返回参数说明：
 
 登录或注册成功回调方法：onLoginSuccessCallback
 回调参数说明：
@@ -178,7 +205,7 @@ JFSDK.getInstance().doLogin();
 |code|string|登录失败错误码|
 |errorMsg|string|登录失败的消息提示|
 
-##### 3.3.2 不使用绝峰登录
+##### 3.3.3 研发方使用自己的登录
 
 代码调用：
 ```
@@ -186,6 +213,14 @@ JFSDK.getInstance().syncUserId(String userId, String token);
 ```
 
 若使用游戏自己的账号体系（使用游戏自带的登录注册功能），则需要接入此方法。请将登录后的用户唯一标识userId及用户token凭证使用本方法接入，接入后会回调onSyncSuccess方法
+注：为了保证用户安全及合法性，建议研发根据我方要求提供一个服务端验证接口，userId,token 将作为验证参数传入 具体参考服务端文档
+
+参数说明：
+|参数名|类型|参数说明|
+|-------------|-------------|-------------|
+|userId|string|当前游戏唯一的用户ID，最大长度32位以内。|
+|token|string|用户登录成功的凭证，建议每次传唯一值。|
+
 注：为了保证用户安全及合法性，建议研发根据我方要求提供一个服务端验证接口，userId,token 将作为验证参数传入 具体参考服务端文档
 
 #### 3.4：支付
@@ -461,11 +496,13 @@ JFSDK.getInstance().switchAccount();
 String channelType = JFSDK.getInstance().getChannelType()；
 ```
 
+用途说明： 集成这个API , 您可以按子渠道等维度统计各个渠道的数据，更好的支撑市场运营计划。
+
 目前海外渠道编号如下(区分大小写)
 
 |渠道名称|编号|
 |-------------|-------------|
-|绝峰母包|""|
+|绝峰母包|jfgame|
 |小米|xiaomiglobal|
 |小米测试|mitest|
 |TapTap|taptap|
@@ -484,9 +521,58 @@ String channelType = JFSDK.getInstance().getChannelType()；
 |DMM|dmm|
 |三星手机|sanxingglobal|
 
-#### 4 混淆
+#### 3.13：获取商品信息【可选】
+
+与 JFSDK 建立连接后，您就可以查询可售的商品并将其展示给用户了。
+在将商品展示给用户之前，查询商品详情是非常重要的一步，因为查询会返回本地化的商品信息。
+如需查询应用内商品详情，请调用 queryProductDetailsAsync。
+支持单个和批量查询，当 finalList 为空时 会返回所有商品信息。
+
+示例代码：
+```
+
+//查询商品详情
+List<String> finalList = new List<String>();
+//不添加id会返回所有商品信息，添加id会返回特定商品信息
+finalList.Add("charge_2.99");
+PdListener = new CallBackPdListener();
+JFSDK.getInstance().queryProductDetailsAsync(finalList, PdListener);
+
+```
+
+返回商品字段信息具体获取方法请看demo代码
+```
+
+    "currency": "USD",//货币单位
+    "describe": "You can get the goods after purchase.",//商品描述
+    "currencySymbol": "₽",//货币单位符号
+    "price": "0.99",//价格
+    "sku": "charge_0.99",//商品id
+    "title": "Pack I"//商品名称
+
+```
+
+#### 4 最佳实践
+
+##### 4.1 混淆
 
 JFSDK包是以jar提供给用户的，已经半混淆状态，您在混淆自己APK包的时候请不要将jar包一起混淆，因为里面有自定义UI控件，若被混淆后会因为无法找到相关类而抛异常
+
+##### 4.2：APK 包名
+
+如果方便，请使用.jf 结尾即可，并请允许绝峰修改游戏包名称。分包的时候需要这么做。
+如果您的服务器端会校验包名，绝峰这边也可以提前收集所需要的包名列表，提交白名单。
+这样做的主要原因是我们的渠道（华为、三星）等对游戏的包名有特殊的要求。
+
+##### 4.3：母包测试【重要】
+
+为方便了解SDK集成情况，提升对接效率，对接完成后，请务必进行母包测试。
+自测：点击悬浮窗 --> 个人中心 --> 生命周期测试  查看是否有未完成接入接口，未完成的需要对接完成，无法完成对接群联系我方开发人员沟通. 
+
+##### 4.4： 游戏内商品价格单位
+
+SDK集成的时候，母包内显示的货币单位是人民币，但请放心，分包的时候，渠道那边会展示当地的货币。
+
 
 ## 联系我们
 

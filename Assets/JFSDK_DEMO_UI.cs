@@ -4,6 +4,7 @@ using UnityEngine.UI;
 using System.Text;
 using jfsdk;
 using System.Collections.Concurrent;
+using System.Collections.Generic;
 
 public class JFSDK_DEMO_UI : MonoBehaviour
 {
@@ -24,6 +25,7 @@ public class JFSDK_DEMO_UI : MonoBehaviour
     private object lockObject = new object();
 
     private static CallBackListener JFListener;
+    private static CallBackPdListener PdListener;
 
 
     //字符串转unicode 此方法可能不适用所有字符 请根据项目自身情况修改
@@ -110,9 +112,9 @@ public class JFSDK_DEMO_UI : MonoBehaviour
                 return;
             }
             //绝峰登录
-            JFSDK.getInstance().doLogin();
+            //JFSDK.getInstance().doLogin();
             //非绝峰登录
-            //JFSDK.getInstance().syncUserId("1223", "juwckwjhcuu38927J");
+            JFSDK.getInstance().syncUserId("1223", "juwckwjhcuu38927J");
             Debug.Log("下游渠道标识：" + JFSDK.getInstance().getChannelType());
         }
         catch (Exception ex)
@@ -130,6 +132,14 @@ public class JFSDK_DEMO_UI : MonoBehaviour
                 Debug.LogError("请先登录");
                 return;
             }
+
+            //查询商品详情
+            List<String> finalList = new List<String>();
+            //不添加id会返回所有商品信息，添加id会返回特定商品信息
+            finalList.Add("charge_2.99");
+            PdListener = new CallBackPdListener();
+            JFSDK.getInstance().queryProductDetailsAsync(finalList, PdListener);
+
             string strParam = stringToUnicode(payArgs.text);
             if (strParam.Equals(""))
             {
@@ -284,6 +294,25 @@ public class JFSDK_DEMO_UI : MonoBehaviour
 //************************************************************以下是需要实现的回调接口*************************************************************************************************************************
 //callback
 
+public class CallBackPdListener : ProductDetailsResponseListener
+{
+    public override void onProductDetailsResponseCallback(List<ProductDetails> productDetailsList)
+    {
+        Debug.Log("查询到的商品条数：" + productDetailsList.Count);
+        int numint = 1;
+        foreach (ProductDetails productDetails in productDetailsList)
+        {
+            Debug.Log("第 " + numint + "条：");
+            Debug.Log("商品名称：" + productDetails.getTitle());
+            Debug.Log("商品描述：" + productDetails.getDescribe());
+            Debug.Log("商品货币单位：" + productDetails.getCurrency());
+            Debug.Log("商品价格：" + productDetails.getPrice());
+            //其它字段请参考对应类 ProductDetails
+            numint++;
+        }
+    }
+}
+
 public class CallBackListener : JFSDKListener
 {
     public override void onCancleExitCallback(string desc)
@@ -354,6 +383,7 @@ public class CallBackListener : JFSDKListener
             Debug.Log("用户id：" + logincallBack.getJfUserId());
             Debug.Log("登录token：" + logincallBack.getToken());
             JFSDK_DEMO_UI.token = logincallBack.getToken();
+            Debug.Log("登录类型为："+ JFSDK.getInstance().getLoginType());
         }
         catch
         {
@@ -393,5 +423,10 @@ public class CallBackListener : JFSDKListener
     {
         Debug.Log("非绝峰登录成功了");
         JFSDK_DEMO_UI.token = "yourtoken";
+        Debug.Log("登录类型为：" + JFSDK.getInstance().getLoginType());
+    }
+    public override void onSyncFailureCallback(String msg)
+    {
+        Debug.Log("非绝峰登录失败了，返回信息："+ msg);
     }
 }

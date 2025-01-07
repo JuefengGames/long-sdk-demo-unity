@@ -36,7 +36,7 @@
         <activity
             android:name="com.juefeng.sdk.juefengsdk.ui.activity.InitdataActivity"
             android:configChanges="keyboardHidden|navigation|orientation|screenSize"
-            android:screenOrientation="landscape"/>
+            android:screenOrientation="behind"/>
         <activity
             android:name="com.juefeng.sdk.juefengsdk.ui.activity.PayActivity"
             android:configChanges="orientation|navigation|screenSize|keyboard|keyboardHidden"
@@ -47,7 +47,7 @@
         <activity
             android:name="com.juefeng.sdk.juefengsdk.ui.activity.WebViewActivity"
             android:configChanges="keyboardHidden|navigation|orientation|screenSize"
-            android:screenOrientation="landscape" />
+            android:screenOrientation="behind" />
         <activity
             android:name="com.alipay.sdk.app.H5PayActivity"
             android:configChanges="orientation|keyboardHidden|navigation|screenSize"
@@ -87,10 +87,11 @@
             android:value="true" />
         <meta-data
             android:name="JF_APPID"
-            android:value="81205" />
+            android:value="81591" />
         <meta-data
             android:name="JF_APPKEY"
-            android:value="1F9A13ECF1554762D54F149286D8AD48" />
+            android:value="E07982D77E4865AF7FF140CEAE07705B" />
+        <meta-data android:name="JF_LOGIN_TYPE" android:value="2"/>
     </application>
 
 </manifest>

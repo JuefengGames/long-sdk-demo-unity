@@ -1,5 +1,6 @@
 using UnityEngine;
 using System;
+using System.Collections.Generic;
 
 
 namespace jfsdk
@@ -104,6 +105,25 @@ namespace jfsdk
             return "";
 #endif
         }
+
+        public String getLoginType()
+        {
+#if UNITY_ANDROID && !UNITY_EDITOR
+			JFUnitySupportAndroid androidSupport = JFUnitySupportAndroid.getInstance();
+
+			return androidSupport.getLoginType();
+#else
+            return "JuefengLogin";
+#endif
+        }
+        public void queryProductDetailsAsync(List<String> finalList, ProductDetailsResponseListener PdListener)
+        {
+#if UNITY_ANDROID && !UNITY_EDITOR
+			JFUnitySupportAndroid androidSupport = JFUnitySupportAndroid.getInstance();
+			androidSupport.queryProductDetailsAsync(finalList,PdListener);
+#endif
+        }
+
         public void onCreate(AndroidJavaObject act)
         {
 #if UNITY_ANDROID && !UNITY_EDITOR
@@ -206,6 +226,7 @@ namespace jfsdk
     {
 #if UNITY_ANDROID && !UNITY_EDITOR
         AndroidJavaObject ao;
+        AndroidJavaObject aoPD;
         AndroidJavaObject unityActivity;
         private static JFUnitySupportAndroid instance;
 
@@ -214,6 +235,8 @@ namespace jfsdk
             unityActivity = unityPlayerClass.GetStatic<AndroidJavaObject>("currentActivity");
             AndroidJavaClass ac = new AndroidJavaClass("com.juefeng.sdk.juefengsdk.JFSDK");
             ao = ac.CallStatic<AndroidJavaObject>("getInstance");
+            AndroidJavaClass acPD = new AndroidJavaClass("com.jfsdk.billing.JFBillingClient");
+            aoPD = acPD.CallStatic<AndroidJavaObject>("getInstance");
         }
 
         public static JFUnitySupportAndroid getInstance()
@@ -336,6 +359,25 @@ namespace jfsdk
         {
             Debug.Log("开始调用SDK获取渠道标识方法");
             return ao.Call<string>("getChannelType");
+        }
+
+        public String getLoginType()
+        {
+            Debug.Log("开始调用SDK获取登录类型方法");
+            return ao.Call<String>("getLoginType");
+        }
+
+        public void queryProductDetailsAsync(List<String> finalList,ProductDetailsResponseListener PdListener)
+        {
+            //string[] stringArray = {};
+            AndroidJavaObject javaList = new AndroidJavaObject("java.util.ArrayList");
+            foreach (string item in finalList)
+            {
+                // 向 Java 的 ArrayList 中添加元素。
+                javaList.Call<bool>("add", item);
+            }
+            aoPD.Call("queryProductDetailsAsync",unityActivity,javaList,PdListener);
+    
         }
 
         public void onCreate(AndroidJavaObject act)
