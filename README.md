@@ -4,7 +4,7 @@ Sure, here is the translation of the README file into English:
 
 ## LANGUAGE
 
-reading in English | 阅读英文文档
+[reading in chinese | 阅读中文文档](https://github.com/JuefengGames/long-sdk-demo-unity/blob/main/README_ZH_CN.md)  
 
 ## Demo Introduction
 
